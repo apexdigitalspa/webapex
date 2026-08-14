@@ -1,44 +1,45 @@
 /* Reset & Estilos Base */
 :root {
-  /* Modo Claro por Defecto */
-  --bg-color: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  /* Modo Claro Cálido Minimalista por Defecto */
+  --bg-color: #fbfbf9; /* Alabastro cálido, orgánico y limpio */
+  --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
-  --border-color: rgba(15, 23, 42, 0.06);
-  --border-hover: rgba(79, 70, 229, 0.3);
+  --border-color: rgba(17, 17, 17, 0.08);
+  --border-hover: rgba(17, 17, 17, 0.2);
   
-  --primary-color: #4f46e5; /* Indigo */
-  --secondary-color: #0f172a; /* Deep Slate */
-  --accent-color: #3b82f6; /* Blue */
+  --primary-color: #111111; /* Negro carbón puro */
+  --secondary-color: #4b5563; /* Gris piedra */
+  --accent-color: #b45309; /* Ámbar arcilla cálido */
   
-  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-  --gradient-glow: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, transparent 60%);
+  --gradient-primary: linear-gradient(135deg, #111111 0%, #4b5563 100%);
   
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-dark: #0f172a;
+  --text-main: #111111;
+  --text-muted: #57534e; /* Gris cálido */
   
-  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --glass-shadow: 0 4px 20px rgba(15, 23, 42, 0.02), 0 1px 3px rgba(15, 23, 42, 0.02);
+  --transition-smooth: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
 }
 
-/* Override para Modo Oscuro */
+/* Modo Oscuro Mate Profesional (No Azulado) */
 body.dark-mode {
-  --bg-color: #090d16;
-  --bg-card: rgba(15, 22, 42, 0.5);
-  --bg-card-hover: rgba(23, 33, 62, 0.8);
+  --bg-color: #0d0d0d; /* Negro absoluto mate */
+  --bg-card: #141414;
+  --bg-card-hover: #1c1c1c;
   --border-color: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(99, 102, 241, 0.5);
+  --border-hover: rgba(255, 255, 255, 0.18);
   
-  --primary-color: #6366f1; /* Lighter Indigo */
-  --secondary-color: #f8fafc;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --gradient-glow: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
-  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  --primary-color: #f5f5f5; /* Blanco tiza */
+  --secondary-color: #a3a3a3;
+  --accent-color: #f59e0b;
+  
+  --gradient-primary: linear-gradient(135deg, #f5f5f5 0%, #737373 100%);
+  
+  --text-main: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -58,25 +59,26 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   
-  /* Patrón de Rejilla Fina de Ingeniería */
+  /* Retícula de ingeniería muy fina y minimalista */
   background-image: 
-    linear-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(17, 17, 17, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.012) 1px, transparent 1px);
+  background-size: 50px 50px;
   background-attachment: fixed;
   transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
 }
 
 body.dark-mode {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em; /* Letras juntas para diseño editorial suizo */
+  line-height: 1.1;
 }
 
 a {
@@ -91,7 +93,7 @@ button, input, select, textarea {
 /* Clases de Utilidad */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px; /* Ancho ajustado para mejor lectura */
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -104,10 +106,8 @@ button, input, select, textarea {
 
 .glass {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: var(--glass-shadow);
   transition: var(--transition-smooth);
 }
@@ -116,10 +116,10 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 2rem;
-  font-size: 0.95rem;
+  padding: 0.85rem 2.2rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  border-radius: 6px; /* Bordes más rectos para look técnico, no burbuja */
+  border-radius: 4px; /* Bordes cuadrados, diseño de arquitectura suiza */
   border: none;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -127,18 +127,12 @@ button, input, select, textarea {
 
 .btn-primary {
   background: var(--primary-color);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+  color: var(--bg-color); /* Contraste con el fondo actual */
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  background: #4338ca;
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
-}
-
-body.dark-mode .btn-primary:hover {
-  background: #4f46e5;
+  opacity: 0.9;
 }
 
 .btn-secondary {
@@ -148,7 +142,7 @@ body.dark-mode .btn-primary:hover {
 }
 
 .btn-secondary:hover {
-  background: rgba(15, 23, 42, 0.03);
+  background: rgba(17, 17, 17, 0.02);
   border-color: var(--text-main);
   transform: translateY(-1px);
 }
@@ -163,23 +157,11 @@ section {
   position: relative;
 }
 
-/* Efecto Luz de Fondo sutil */
-.glow-spot {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: var(--gradient-glow);
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Animaciones */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -188,7 +170,7 @@ section {
 }
 
 .animate-fade-in {
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Botón Switcher de Tema */
@@ -197,7 +179,7 @@ section {
   border: 1px solid var(--border-color);
   color: var(--text-main);
   padding: 0.5rem;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -209,11 +191,11 @@ section {
 
 .theme-toggle-btn:hover {
   border-color: var(--primary-color);
-  background: rgba(15, 23, 42, 0.03);
+  background: rgba(17, 17, 17, 0.02);
 }
 
 body.dark-mode .theme-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .theme-icon-sun {
@@ -239,11 +221,11 @@ body.dark-mode .theme-icon-sun {
   }
   
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   }
   
   .btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     font-size: 0.9rem;
   }
   
@@ -257,4 +239,3 @@ body.dark-mode .theme-icon-sun {
     text-align: center;
   }
 }
-

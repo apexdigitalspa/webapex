@@ -29,7 +29,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--border-color);
   z-index: 1;
 }
 
@@ -38,7 +38,7 @@
   top: 15px;
   left: 0;
   height: 2px;
-  background: var(--gradient-primary);
+  background: var(--primary-color);
   z-index: 2;
   transition: var(--transition-smooth);
   width: 0%;
@@ -63,18 +63,24 @@
 .step-dot.active {
   border-color: var(--primary-color);
   color: var(--primary-color);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 17, 17, 0.05);
+}
+
+body.dark-mode .step-dot.active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .step-dot.completed {
-  background: var(--gradient-primary);
+  background: var(--primary-color);
   border-color: transparent;
-  color: var(--text-main);
+  color: var(--bg-color);
 }
 
 .planner-title {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .planner-subtitle {
@@ -86,16 +92,16 @@
 /* Grid de Opciones del Planificador */
 .options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .option-card {
-  padding: 1.5rem;
+  padding: 1.8rem 1.5rem;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px; /* Bordes cuadrados suizos */
+  background: var(--bg-card);
   cursor: pointer;
   transition: var(--transition-smooth);
   position: relative;
@@ -103,8 +109,8 @@
 }
 
 .option-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
 }
 
 .option-card input[type="radio"],
@@ -116,18 +122,23 @@
 }
 
 .option-card.selected {
-  border-color: var(--secondary-color);
-  background: rgba(6, 182, 212, 0.05);
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+  border-color: var(--primary-color);
+  background: rgba(17, 17, 17, 0.02);
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.02);
+}
+
+body.dark-mode .option-card.selected {
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .option-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
 
 .option-label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-main);
   display: block;
@@ -140,17 +151,17 @@
 
 .form-label {
   display: block;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--text-main);
   margin-bottom: 0.5rem;
 }
 
 .form-control {
   width: 100%;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 0.8rem 1rem;
   color: var(--text-main);
   font-size: 0.95rem;
@@ -160,8 +171,11 @@
 .form-control:focus {
   outline: none;
   border-color: var(--primary-color);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.02);
+}
+
+body.dark-mode .form-control:focus {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Navegación del Planificador */
@@ -175,9 +189,9 @@
 
 /* Pantalla de Resumen Final */
 .summary-container {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 2rem;
   margin-bottom: 2rem;
 }
@@ -186,7 +200,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .summary-item:last-child {
@@ -206,7 +220,7 @@
 @keyframes stepFade {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;

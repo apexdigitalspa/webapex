@@ -1,7 +1,7 @@
 .footer {
-  background: rgba(5, 7, 13, 0.95);
+  background: var(--bg-card);
   border-top: 1px solid var(--border-color);
-  padding: 4rem 0 2rem 0;
+  padding: 5rem 0 3rem 0;
   margin-top: 5rem;
 }
 
@@ -9,11 +9,13 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .footer-brand h3 {
   font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin-bottom: 1rem;
 }
 
@@ -25,6 +27,8 @@
 
 .footer-links h4 {
   font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 1.2rem;
   color: var(--text-main);
 }
@@ -43,12 +47,12 @@
 }
 
 .footer-links a:hover {
-  color: var(--secondary-color);
-  padding-left: 5px;
+  color: var(--primary-color);
+  padding-left: 4px;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-color);
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -60,22 +64,6 @@
 .footer-bottom p {
   color: var(--text-muted);
   font-size: 0.85rem;
-}
-
-.footer-socials {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.social-icon {
-  color: var(--text-muted);
-  font-size: 1.2rem;
-  transition: var(--transition-smooth);
-}
-
-.social-icon:hover {
-  color: var(--secondary-color);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
