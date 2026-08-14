@@ -1,0 +1,71 @@
+.process-section {
+  padding: 8rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.process-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
+/* Conexión visual en desktop (línea discontinua entre tarjetas) */
+.process-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: -2rem;
+  width: 1.5rem;
+  height: 1px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.process-step {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  opacity: 0.8;
+}
+
+.process-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.process-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+  
+  .process-card:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

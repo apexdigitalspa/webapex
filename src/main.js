@@ -2,6 +2,7 @@
 import './styles/navbar.css';
 import './styles/hero.css';
 import './styles/services.css';
+import './styles/process.css';
 import './styles/planner.css';
 import './styles/contact.css';
 import './styles/footer.css';
@@ -10,6 +11,7 @@ import './styles/footer.css';
 import { Navbar, initNavbar } from './components/Navbar.js';
 import { Hero } from './components/Hero.js';
 import { Services } from './components/Services.js';
+import { Process } from './components/Process.js';
 import { ProjectPlanner, initProjectPlanner } from './components/ProjectPlanner.js';
 import { Contact, initContact } from './components/Contact.js';
 import { Footer } from './components/Footer.js';
@@ -22,6 +24,7 @@ if (app) {
     <main>
       ${Hero()}
       ${Services()}
+      ${Process()}
       ${ProjectPlanner()}
       ${Contact()}
     </main>
