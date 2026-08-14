@@ -45,7 +45,7 @@ export function Process() {
             <div class="process-step">04</div>
             <h3 class="process-title">Lanzamiento</h3>
             <p class="process-desc">
-              Configuramos el hosting gratuito, vinculamos tu dominio .cl, hacemos las pruebas de seguridad y te entregamos el sitio listo para vender.
+              Configuramos el hosting óptimo para tu proyecto, vinculamos tu dominio .cl, realizamos pruebas de seguridad y te entregamos tu sitio listo para operar.
             </p>
           </div>
         </div>
