@@ -53,17 +53,6 @@ function getPlannerIcon(type, val) {
     `;
   }
 
-  if (type === 'timeframe') {
-    return `
-      <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-        <line x1="16" y1="2" x2="16" y2="6"></line>
-        <line x1="8" y1="2" x2="8" y2="6"></line>
-        <line x1="3" y1="10" x2="21" y2="10"></line>
-      </svg>
-    `;
-  }
-
   return '';
 }
 
@@ -81,14 +70,6 @@ export function ProjectPlanner() {
       <input type="checkbox" name="project-features" value="${f.value}">
       <div class="option-icon" style="color: var(--primary-color);">${getPlannerIcon('feature', f.value)}</div>
       <span class="option-label">${f.label}</span>
-    </div>
-  `).join('');
-
-  const timeframeOptions = config.planner.timeframes.map(tf => `
-    <div class="option-card" data-type="radio" data-name="project-timeframe" data-value="${tf.value}">
-      <input type="radio" name="project-timeframe" value="${tf.value}">
-      <div class="option-icon" style="color: var(--secondary-color);">${getPlannerIcon('timeframe', tf.value)}</div>
-      <span class="option-label">${tf.label}</span>
     </div>
   `).join('');
 
@@ -135,14 +116,10 @@ export function ProjectPlanner() {
           <div class="planner-step" data-step="3">
             <h3 class="planner-title">Detalles adicionales del Proyecto</h3>
             <p class="planner-subtitle">Ayúdanos a entender el contexto de tu marca o negocio.</p>
-            
-            <div class="options-grid" style="margin-bottom: 1.5rem;">
-              ${timeframeOptions}
-            </div>
 
             <div class="form-group">
               <label class="form-label" for="project-desc">Cuéntanos un poco sobre tu idea o negocio</label>
-              <textarea id="project-desc" class="form-control" rows="4" maxlength="500" placeholder="Ej: Quiero vender ropa deportiva y necesito que se conecte con Webpay. También me gustaría poder subir fotos de nuevos productos yo mismo..."></textarea>
+              <textarea id="project-desc" class="form-control" rows="5" maxlength="500" placeholder="Ej: Quiero vender ropa deportiva y necesito que se conecte con Webpay. También me gustaría poder subir fotos de nuevos productos yo mismo..."></textarea>
               <div id="planner-desc-counter" style="text-align: right; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">0 / 500 caracteres</div>
             </div>
 
@@ -171,10 +148,6 @@ export function ProjectPlanner() {
               <div class="summary-item">
                 <span class="summary-label">Funcionalidades:</span>
                 <span class="summary-value" id="sum-features">Ninguna</span>
-              </div>
-              <div class="summary-item">
-                <span class="summary-label">Plazo estimado:</span>
-                <span class="summary-value" id="sum-timeframe">No especificado</span>
               </div>
               <div class="summary-item">
                 <span class="summary-label">Cliente:</span>
@@ -225,8 +198,6 @@ export function initProjectPlanner() {
     typeLabel: '',
     features: [],
     featuresLabels: [],
-    timeframe: '',
-    timeframeLabel: '',
     desc: '',
     name: '',
     email: ''
@@ -251,7 +222,7 @@ export function initProjectPlanner() {
       const len = descTextarea.value.length;
       descCounter.textContent = `${len} / 500 caracteres`;
       if (len >= 450) {
-        descCounter.style.color = '#ef4444'; // Red alert when close to max limit
+        descCounter.style.color = '#ef4444';
       } else {
         descCounter.style.color = 'var(--text-muted)';
       }
@@ -280,9 +251,6 @@ export function initProjectPlanner() {
         if (name === 'project-type') {
           plannerData.type = val;
           plannerData.typeLabel = label;
-        } else if (name === 'project-timeframe') {
-          plannerData.timeframe = val;
-          plannerData.timeframeLabel = label;
         }
       } else if (type === 'checkbox') {
         card.classList.toggle('selected');
@@ -353,7 +321,6 @@ export function initProjectPlanner() {
     document.getElementById('sum-features').textContent = plannerData.featuresLabels.length > 0 
       ? plannerData.featuresLabels.join(', ') 
       : 'Ninguna';
-    document.getElementById('sum-timeframe').textContent = plannerData.timeframeLabel || 'No especificado';
     document.getElementById('sum-client').textContent = `${plannerData.name || 'Invitado'} (${plannerData.email || 'Sin correo'})`;
   }
 
@@ -423,7 +390,6 @@ export function initProjectPlanner() {
       const textMessage = `Hola *${config.brand.name}*, me gustaría cotizar un proyecto web:
 - *Tipo de Proyecto:* ${plannerData.typeLabel}
 - *Funcionalidades Clave:* ${featuresStr}
-- *Plazo:* ${plannerData.timeframeLabel || 'Flexible'}
 - *Nombre:* ${cleanName}
 - *Correo:* ${cleanEmail}
 - *Detalles:* ${cleanDesc || 'Sin comentarios adicionales.'}`;

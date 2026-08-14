@@ -45,11 +45,6 @@ export const config = {
       { label: "Optimización SEO avanzada (Google)", value: "seo" },
       { label: "Sistema de reservas / agenda online", value: "booking" },
       { label: "Integración con redes sociales / WhatsApp", value: "social" }
-    ],
-    timeframes: [
-      { label: "Urgente (menos de 2 semanas)", value: "urgent" },
-      { label: "Plazo estándar (3 a 5 semanas)", value: "normal" },
-      { label: "Flexible (+6 semanas)", value: "flexible" }
     ]
   }
 };
