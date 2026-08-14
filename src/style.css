@@ -1,0 +1,233 @@
+/* Reset & Estilos Base */
+:root {
+  /* Modo Claro por Defecto */
+  --bg-color: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: #ffffff;
+  --border-color: rgba(15, 23, 42, 0.06);
+  --border-hover: rgba(79, 70, 229, 0.3);
+  
+  --primary-color: #4f46e5; /* Indigo */
+  --secondary-color: #0f172a; /* Deep Slate */
+  --accent-color: #3b82f6; /* Blue */
+  
+  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  --gradient-glow: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, transparent 60%);
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dark: #0f172a;
+  
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass-shadow: 0 4px 20px rgba(15, 23, 42, 0.02), 0 1px 3px rgba(15, 23, 42, 0.02);
+}
+
+/* Override para Modo Oscuro */
+body.dark-mode {
+  --bg-color: #090d16;
+  --bg-card: rgba(15, 22, 42, 0.5);
+  --bg-card-hover: rgba(23, 33, 62, 0.8);
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(99, 102, 241, 0.5);
+  
+  --primary-color: #6366f1; /* Lighter Indigo */
+  --secondary-color: #f8fafc;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --gradient-glow: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  
+  /* Patrón de Rejilla Fina de Ingeniería */
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
+}
+
+body.dark-mode {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Clases de Utilidad */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-smooth);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px; /* Bordes más rectos para look técnico, no burbuja */
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  background: #4338ca;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #4f46e5;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Secciones */
+section {
+  padding: 9rem 0 5rem 0;
+  position: relative;
+}
+
+/* Efecto Luz de Fondo sutil */
+.glow-spot {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: var(--gradient-glow);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Botón Switcher de Tema */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  width: 36px;
+  height: 36px;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+.theme-icon-moon {
+  display: block;
+}
+
+body.dark-mode .theme-icon-moon {
+  display: none;
+}
+
+body.dark-mode .theme-icon-sun {
+  display: block;
+}
