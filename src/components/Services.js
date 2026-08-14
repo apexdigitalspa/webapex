@@ -46,10 +46,12 @@ function getServiceIcon(id) {
 
 export function Services() {
   const serviceCards = config.services.map(service => `
-    <div class="service-card glass animate-fade-in" style="border-radius: 8px; padding: 3rem 2rem;">
-      <div class="service-icon" style="color: var(--primary-color); margin-bottom: 2rem;">${getServiceIcon(service.id)}</div>
-      <h3 class="service-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">${service.title}</h3>
-      <p class="service-desc" style="line-height: 1.6; font-size: 0.95rem;">${service.description}</p>
+    <div class="service-card ${service.id} glass animate-fade-in">
+      <div>
+        <div class="service-icon">${getServiceIcon(service.id)}</div>
+        <h3 class="service-title">${service.title}</h3>
+      </div>
+      <p class="service-desc">${service.description}</p>
     </div>
   `).join('');
 

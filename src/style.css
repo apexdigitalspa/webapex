@@ -231,3 +231,30 @@ body.dark-mode .theme-icon-moon {
 body.dark-mode .theme-icon-sun {
   display: block;
 }
+
+/* Ajustes de Responsividad Móvil */
+@media (max-width: 768px) {
+  section {
+    padding: 5rem 0 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

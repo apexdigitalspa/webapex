@@ -6,8 +6,8 @@ export const config = {
     logo: "▲ Apex Digital"
   },
   contact: {
-    email: "contacto@apexdigital.cl", // Cambiar por tu correo real
-    whatsapp: "+56912345678"       // Cambiar por tu WhatsApp real en formato internacional
+    email: "apexdigitalspa@gmail.com", // Tu correo real
+    whatsapp: "+56973787216"           // Tu WhatsApp real
   },
   services: [
     {
