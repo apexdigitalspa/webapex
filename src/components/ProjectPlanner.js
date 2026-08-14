@@ -38,8 +38,6 @@ function getPlannerIcon(type, val) {
             <line x1="15" y1="1" x2="15" y2="4"></line>
             <line x1="9" y1="20" x2="9" y2="23"></line>
             <line x1="15" y1="20" x2="15" y2="23"></line>
-            <line x1="20" y1="9" x2="23" y2="9"></line>
-            <line x1="20" y1="15" x2="23" y2="15"></line>
           </svg>
         `;
     }
@@ -144,17 +142,18 @@ export function ProjectPlanner() {
 
             <div class="form-group">
               <label class="form-label" for="project-desc">Cuéntanos un poco sobre tu idea o negocio</label>
-              <textarea id="project-desc" class="form-control" rows="4" placeholder="Ej: Quiero vender ropa deportiva y necesito que se conecte con Webpay. También me gustaría poder subir fotos de nuevos productos yo mismo..."></textarea>
+              <textarea id="project-desc" class="form-control" rows="4" maxlength="500" placeholder="Ej: Quiero vender ropa deportiva y necesito que se conecte con Webpay. También me gustaría poder subir fotos de nuevos productos yo mismo..."></textarea>
+              <div id="planner-desc-counter" style="text-align: right; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">0 / 500 caracteres</div>
             </div>
 
             <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
               <div>
                 <label class="form-label" for="client-name">Tu Nombre</label>
-                <input type="text" id="client-name" class="form-control" placeholder="Juan Pérez">
+                <input type="text" id="client-name" class="form-control" maxlength="50" placeholder="Juan Pérez">
               </div>
               <div>
                 <label class="form-label" for="client-email">Correo de Contacto</label>
-                <input type="email" id="client-email" class="form-control" placeholder="juan@ejemplo.cl">
+                <input type="email" id="client-email" class="form-control" maxlength="100" placeholder="juan@ejemplo.cl">
               </div>
             </div>
           </div>
@@ -217,6 +216,8 @@ export function initProjectPlanner() {
   const btnNext = document.getElementById('btn-next');
   const btnPrev = document.getElementById('btn-prev');
   const optionCards = document.querySelectorAll('.option-card');
+  const descTextarea = document.getElementById('project-desc');
+  const descCounter = document.getElementById('planner-desc-counter');
 
   // Guardar datos temporalmente
   const plannerData = {
@@ -230,6 +231,32 @@ export function initProjectPlanner() {
     name: '',
     email: ''
   };
+
+  // Función de sanitización de texto para seguridad (prevenir inyección)
+  function sanitizeInput(val) {
+    if (!val) return '';
+    return val
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .replace(/\//g, '&#x2F;')
+      .trim();
+  }
+
+  // Manejar contador dinámico de caracteres
+  if (descTextarea && descCounter) {
+    descTextarea.addEventListener('input', () => {
+      const len = descTextarea.value.length;
+      descCounter.textContent = `${len} / 500 caracteres`;
+      if (len >= 450) {
+        descCounter.style.color = '#ef4444'; // Red alert when close to max limit
+      } else {
+        descCounter.style.color = 'var(--text-muted)';
+      }
+    });
+  }
 
   // Manejar selección de tarjetas de opción
   optionCards.forEach(card => {
@@ -318,9 +345,9 @@ export function initProjectPlanner() {
   }
 
   function renderSummary() {
-    plannerData.desc = document.getElementById('project-desc').value;
-    plannerData.name = document.getElementById('client-name').value;
-    plannerData.email = document.getElementById('client-email').value;
+    plannerData.desc = sanitizeInput(document.getElementById('project-desc').value);
+    plannerData.name = sanitizeInput(document.getElementById('client-name').value);
+    plannerData.email = sanitizeInput(document.getElementById('client-email').value);
 
     document.getElementById('sum-type').textContent = plannerData.typeLabel || 'No seleccionado';
     document.getElementById('sum-features').textContent = plannerData.featuresLabels.length > 0 
@@ -337,11 +364,34 @@ export function initProjectPlanner() {
       alert('Por favor selecciona un tipo de sitio web para continuar.');
       return;
     }
+    
+    // Validación estricta con expresiones regulares en el paso 3 (Seguridad)
     if (currentStep === 3) {
-      const nameVal = document.getElementById('client-name').value;
-      const emailVal = document.getElementById('client-email').value;
-      if (!nameVal || !emailVal) {
-        alert('Por favor completa tu nombre y correo para armar el resumen.');
+      const nameVal = document.getElementById('client-name').value.trim();
+      const emailVal = document.getElementById('client-email').value.trim();
+      const descVal = document.getElementById('project-desc').value.trim();
+
+      // Validación de Nombre: Solo letras y espacios, largo 2 a 50
+      const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]{2,50}$/;
+      if (!nameRegex.test(nameVal)) {
+        alert('Por favor ingresa un nombre válido (solo letras, de 2 a 50 caracteres).');
+        return;
+      }
+
+      // Validación de Correo electrónico estándar
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailVal) || emailVal.length > 100) {
+        alert('Por favor ingresa un correo electrónico válido (máximo 100 caracteres).');
+        return;
+      }
+
+      // Validación de descripción requerida y segura
+      if (descVal.length < 10) {
+        alert('Por favor describe tu proyecto con un poco más de detalle (mínimo 10 caracteres).');
+        return;
+      }
+      if (descVal.length > 500) {
+        alert('La descripción no puede superar los 500 caracteres.');
         return;
       }
     }
@@ -364,13 +414,19 @@ export function initProjectPlanner() {
   if (btnSubmit) {
     btnSubmit.addEventListener('click', () => {
       const featuresStr = plannerData.featuresLabels.join(', ') || 'Ninguna seleccionada';
+      
+      // Sanitizar antes de armar el texto final
+      const cleanName = sanitizeInput(plannerData.name);
+      const cleanEmail = sanitizeInput(plannerData.email);
+      const cleanDesc = sanitizeInput(plannerData.desc);
+
       const textMessage = `Hola *${config.brand.name}*, me gustaría cotizar un proyecto web:
 - *Tipo de Proyecto:* ${plannerData.typeLabel}
 - *Funcionalidades Clave:* ${featuresStr}
 - *Plazo:* ${plannerData.timeframeLabel || 'Flexible'}
-- *Nombre:* ${plannerData.name}
-- *Correo:* ${plannerData.email}
-- *Detalles:* ${plannerData.desc || 'Sin comentarios adicionales.'}`;
+- *Nombre:* ${cleanName}
+- *Correo:* ${cleanEmail}
+- *Detalles:* ${cleanDesc || 'Sin comentarios adicionales.'}`;
 
       const encodedMessage = encodeURIComponent(textMessage);
       const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodedMessage}`;
