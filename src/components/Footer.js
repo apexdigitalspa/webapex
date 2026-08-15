@@ -7,7 +7,7 @@ export function Footer() {
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <h3 class="text-gradient">${config.brand.logo}</h3>
+          <img src="/logo.png" alt="Apex Digital Logo" style="height: 46px; width: auto; object-fit: contain; margin-bottom: 1rem; border-radius: 4px;" />
           <p>${config.brand.description}</p>
           <p style="margin-top: 1.2rem; font-size: 0.85rem; color: var(--secondary-color); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;">
             Ingeniería de Software & Consultoría Web

@@ -4,8 +4,8 @@ export function Navbar() {
   return `
     <header class="header" id="header">
       <div class="container nav-container">
-        <a href="#" class="logo">
-          <span>▲</span> ${config.brand.name}
+        <a href="#" class="logo" style="display: flex; align-items: center;">
+          <img src="/logo.png" alt="Apex Digital Logo" style="height: 38px; width: auto; object-fit: contain; border-radius: 4px;" />
         </a>
         
         <div style="display: flex; align-items: center; gap: 1.2rem; order: 2;">
