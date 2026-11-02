@@ -1,241 +1,75 @@
-/* Reset & Estilos Base */
+/* ==========================================================================
+   ApexDigital B2B Engineering Design System (Complemento Tailwind CSS)
+   Paleta: #0B0F19 (Fondo base), #38BDF8 / #0284C7 / #1D4ED8 (Acentos Isotipo)
+   ========================================================================== */
+
 :root {
-  /* Modo Claro Cálido Minimalista por Defecto */
-  --bg-color: #fbfbf9; /* Alabastro cálido, orgánico y limpio */
-  --bg-card: #ffffff;
-  --bg-card-hover: #ffffff;
-  --border-color: rgba(17, 17, 17, 0.08);
-  --border-hover: rgba(17, 17, 17, 0.2);
-  
-  --primary-color: #111111; /* Negro carbón puro */
-  --secondary-color: #4b5563; /* Gris piedra */
-  --accent-color: #b45309; /* Ámbar arcilla cálido */
-  
-  --gradient-primary: linear-gradient(135deg, #111111 0%, #4b5563 100%);
-  
-  --text-main: #111111;
-  --text-muted: #57534e; /* Gris cálido */
-  
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  
-  --transition-smooth: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
-}
-
-/* Modo Oscuro Mate Profesional (No Azulado) */
-body.dark-mode {
-  --bg-color: #0d0d0d; /* Negro absoluto mate */
-  --bg-card: #141414;
-  --bg-card-hover: #1c1c1c;
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(255, 255, 255, 0.18);
-  
-  --primary-color: #f5f5f5; /* Blanco tiza */
-  --secondary-color: #a3a3a3;
-  --accent-color: #f59e0b;
-  
-  --gradient-primary: linear-gradient(135deg, #f5f5f5 0%, #737373 100%);
-  
-  --text-main: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --apex-bg: #0B0F19;
+  --apex-card: rgba(17, 24, 39, 0.72);
+  --apex-border: rgba(255, 255, 255, 0.08);
+  --apex-border-hover: rgba(56, 189, 248, 0.4);
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #0B0F19;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  line-height: 1.6;
-  overflow-x: hidden;
-  
-  /* Retícula de ingeniería muy fina y minimalista */
+  background-color: #0B0F19;
+  color: #F8FAFC;
+  /* Retícula de ingeniería milimétrica sutil */
   background-image: 
-    linear-gradient(rgba(17, 17, 17, 0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 17, 0.012) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-attachment: fixed;
-  transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
 }
 
-body.dark-mode {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.008) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: -0.04em; /* Letras juntas para diseño editorial suizo */
-  line-height: 1.1;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-}
-
-/* Clases de Utilidad */
-.container {
-  width: 100%;
-  max-width: 1100px; /* Ancho ajustado para mejor lectura */
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.text-gradient {
-  background: var(--gradient-primary);
+/* Degradado idéntico al isotipo de ApexDigital (la 'A' con flecha azul) */
+.text-apex-gradient {
+  background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 45%, #0284C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.glass {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: var(--glass-shadow);
-  transition: var(--transition-smooth);
+.bg-apex-gradient {
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 50%, #1D4ED8 100%);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 2.2rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  border-radius: 4px; /* Bordes cuadrados, diseño de arquitectura suiza */
-  border: none;
-  cursor: pointer;
-  transition: var(--transition-smooth);
+.bg-apex-gradient:hover {
+  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #2563EB 100%);
 }
 
-.btn-primary {
-  background: var(--primary-color);
-  color: var(--bg-color); /* Contraste con el fondo actual */
+/* Tarjetas B2B con Glassmorphism muy suave y profundidad técnica */
+.apex-glass-card {
+  background: linear-gradient(180deg, rgba(21, 30, 50, 0.75) 0%, rgba(13, 19, 33, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-primary:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
+.apex-glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.15), inset 0 1px 0 0 rgba(56, 189, 248, 0.2);
 }
 
-.btn-secondary {
-  background: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
+/* Efecto de iluminación radial técnica detrás de secciones clave */
+.apex-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.14) 0%, rgba(29, 78, 216, 0.05) 45%, transparent 75%);
 }
 
-.btn-secondary:hover {
-  background: rgba(17, 17, 17, 0.02);
-  border-color: var(--text-main);
-  transform: translateY(-1px);
+/* Animación de entrada limpia */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-body.dark-mode .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* Secciones */
-section {
-  padding: 9rem 0 5rem 0;
-  position: relative;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* Botón Switcher de Tema */
-.theme-toggle-btn {
-  background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  padding: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-smooth);
-  width: 36px;
-  height: 36px;
-}
-
-.theme-toggle-btn:hover {
-  border-color: var(--primary-color);
-  background: rgba(17, 17, 17, 0.02);
-}
-
-body.dark-mode .theme-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.theme-icon-sun {
-  display: none;
-}
-
-.theme-icon-moon {
-  display: block;
-}
-
-body.dark-mode .theme-icon-moon {
-  display: none;
-}
-
-body.dark-mode .theme-icon-sun {
-  display: block;
-}
-
-/* Ajustes de Responsividad Móvil */
-@media (max-width: 768px) {
-  section {
-    padding: 5rem 0 3rem 0;
-  }
-  
-  .container {
-    padding: 0 1.5rem;
-  }
-  
-  .btn {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .hero-actions .btn {
-    width: 100%;
-    text-align: center;
-  }
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

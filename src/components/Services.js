@@ -1,135 +1,136 @@
 import { config } from '../config.js';
 
-function getServiceIcon(id) {
-  const size = 28;
-  const strokeWidth = 1.8;
-  switch (id) {
-    case 'landing':
-      return `
-        <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="6"></circle>
-          <circle cx="12" cy="12" r="2"></circle>
-        </svg>
-      `;
-    case 'corporate':
-      return `
-        <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-        </svg>
-      `;
-    case 'ecommerce':
-      return `
-        <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
-      `;
-    case 'custom':
-      default:
-      return `
-        <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-          <rect x="9" y="9" width="6" height="6"></rect>
-          <line x1="9" y1="1" x2="9" y2="4"></line>
-          <line x1="15" y1="1" x2="15" y2="4"></line>
-          <line x1="9" y1="20" x2="9" y2="23"></line>
-          <line x1="15" y1="20" x2="15" y2="23"></line>
-          <line x1="20" y1="9" x2="23" y2="9"></line>
-          <line x1="20" y1="15" x2="23" y2="15"></line>
-        </svg>
-      `;
-  }
-}
-
 export function Services() {
-  const serviceCards = config.services.map(service => `
-    <div class="service-card ${service.id} glass animate-fade-in">
+  const whatsappBase = `https://wa.me/${config.contact.whatsapp}?text=`;
+
+  const services = [
+    {
+      id: "01",
+      tag: "WEB CORPORATIVA & SEO",
+      title: "Sitios Web y Landing Pages de Alto Rendimiento",
+      description: "Diseñamos y programamos plataformas corporativas enfocadas en velocidad de carga instantánea, arquitectura SEO técnica y posicionamiento comercial para captar clientes B2B.",
+      features: [
+        "Optimización técnica SEO y Core Web Vitals",
+        "Diseño UI/UX sobrio, adaptable a móviles (Responsivo)",
+        "Arquitectura orientada a la conversión de clientes"
+      ],
+      query: "Hola ApexDigital, me interesa cotizar un Sitio Web Corporativo / Landing Page de alto rendimiento.",
+      icon: `
+        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+        </svg>
+      `
+    },
+    {
+      id: "02",
+      tag: "INGENIERÍA DE SOFTWARE",
+      title: "Sistemas Web a Medida y Paneles de Gestión",
+      description: "Construimos aplicaciones web empresariales robustas con integración de bases de datos relacionales, control de usuarios por roles, paneles administrativos e inventario o logística.",
+      features: [
+        "Modelado e integración de bases de datos seguras",
+        "Paneles de control (Dashboards) y métricas en tiempo real",
+        "Integración de APIs, pasarelas de pago y facturación"
+      ],
+      query: "Hola ApexDigital, me interesa cotizar un Sistema Web a Medida con base de datos y panel de gestión.",
+      icon: `
+        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+        </svg>
+      `
+    },
+    {
+      id: "03",
+      tag: "EFICIENCIA & ESCALABILIDAD",
+      title: "Automatización y Experiencias Digitales Modernas",
+      description: "Digitalizamos flujos operativos manuales y creamos experiencias interactivas orientadas a la conversión comercial, reduciendo tiempos de respuesta y costos operativos.",
+      features: [
+        "Flujos de cotización y captación automatizados",
+        "Conector directo con WhatsApp Business y CRM",
+        "Interfaces rápidas sin fricción para el usuario final"
+      ],
+      query: "Hola ApexDigital, me interesa automatizar procesos y mejorar la conversión digital de mi empresa.",
+      icon: `
+        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      `
+    }
+  ];
+
+  const cardsHtml = services.map(item => `
+    <article class="apex-glass-card rounded-2xl p-8 flex flex-col justify-between reveal-up group">
       <div>
-        <div class="service-icon">${getServiceIcon(service.id)}</div>
-        <h3 class="service-title">${service.title}</h3>
+        <!-- Cabecera de la tarjeta -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center group-hover:bg-sky-500/20 transition-colors">
+            ${item.icon}
+          </div>
+          <span class="font-mono text-xs font-semibold tracking-widest text-slate-500 group-hover:text-sky-400 transition-colors">
+            // ${item.id}
+          </span>
+        </div>
+
+        <span class="text-[11px] font-mono uppercase tracking-widest text-sky-400 font-semibold block mb-2">
+          ${item.tag}
+        </span>
+
+        <h3 class="font-heading font-bold text-xl text-white mb-3 leading-snug">
+          ${item.title}
+        </h3>
+
+        <p class="text-slate-300/85 text-sm leading-relaxed mb-6">
+          ${item.description}
+        </p>
+
+        <!-- Lista de entregables técnicos -->
+        <ul class="space-y-2.5 mb-8 border-t border-white/[0.07] pt-5">
+          ${item.features.map(f => `
+            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+              <svg class="w-4 h-4 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>${f}</span>
+            </li>
+          `).join('')}
+        </ul>
       </div>
-      <p class="service-desc">${service.description}</p>
-    </div>
+
+      <a 
+        href="${whatsappBase}${encodeURIComponent(item.query)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider text-slate-200 bg-white/[0.03] hover:bg-sky-500/15 border border-white/[0.08] hover:border-sky-400/40 transition-all"
+      >
+        <span>Consultar esta solución</span>
+        <svg class="w-4 h-4 text-sky-400 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </article>
   `).join('');
 
   return `
-    <section id="soluciones">
-      <div class="glow-spot" style="bottom: 10%; right: -10%;"></div>
-      <div class="container">
-        <div class="section-header animate-fade-in" style="text-align: left; max-width: 700px; margin-bottom: 6rem;">
-          <span class="section-tag" style="font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--primary-color);">SERVICIOS</span>
-          <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-            Desarrollo Web & <br>Arquitectura de Software
-          </h2>
-          <p class="section-subtitle" style="font-size: 1.1rem; line-height: 1.7; margin: 0;">
-            Creamos soluciones sólidas a nivel de código y experiencia de usuario para impulsar tu presencia digital y automatizar tus procesos comerciales.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          ${serviceCards}
-        </div>
-      </div>
-    </section>
-
-    <section class="engineering-section" id="sello" style="padding: 8rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-      <div class="container engineering-grid" style="gap: 5rem;">
-        <div class="animate-fade-in">
-          <span class="section-tag" style="font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--primary-color); margin-bottom: 0.5rem; display: block;">METODOLOGÍA</span>
-          <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.5rem;">
-            Desarrollo de Software Riguroso
-          </h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 3.5rem;">
-            No usamos constructores visuales lentos ni plantillas prefabricadas sobrecargadas. Abordamos cada proyecto con el rigor de la ingeniería, garantizando código limpio, velocidad de carga óptima, seguridad y modularidad.
-          </p>
-          
-          <ul class="engineering-list" style="display: flex; flex-direction: column; gap: 2.5rem; list-style: none; padding: 0;">
-            <li class="engineering-item" style="display: flex; gap: 2rem; align-items: start;">
-              <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--primary-color); opacity: 0.8; line-height: 1; min-width: 45px;">01</div>
-              <div class="eng-text">
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.02em;">Código Optimizado (Performance)</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Nuestros sitios logran tiempos de carga óptimos, lo que mejora la experiencia de usuario y te posiciona mejor en Google.</p>
-              </div>
-            </li>
-            <li class="engineering-item" style="display: flex; gap: 2rem; align-items: start;">
-              <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--primary-color); opacity: 0.8; line-height: 1; min-width: 45px;">02</div>
-              <div class="eng-text">
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.02em;">Seguridad & Buenas Prácticas</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Implementamos configuraciones de seguridad robustas para proteger tus formularios, bases de datos y la privacidad de tus usuarios.</p>
-              </div>
-            </li>
-            <li class="engineering-item" style="display: flex; gap: 2rem; align-items: start;">
-              <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--primary-color); opacity: 0.8; line-height: 1; min-width: 45px;">03</div>
-              <div class="eng-text">
-                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.02em;">Arquitectura Modular</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Diseñamos tu sitio en módulos independientes. Si a futuro quieres agregar un carro de compras o un sistema de reservas, no habrá que rehacer la web desde cero.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tech-stack-container animate-fade-in" style="animation-delay: 0.2s; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 3rem 2.5rem;">
-          <h3 style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem;">Tecnologías de Producción</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2.5rem;">
-            Utilizamos tecnologías modernas que aseguran un desarrollo ágil y resultados de nivel profesional:
-          </p>
-          
-          <div class="tech-tag-group" style="gap: 0.6rem;">
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">HTML5 / Semantic CSS3</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">JavaScript ES6+</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">React.js</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">Vite</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">Node.js</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">MySQL / PostgreSQL</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">Git / GitHub</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">REST APIs</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">Webpay & Flow Integrations</span>
-            <span class="tech-tag" style="border-radius: 4px; padding: 0.6rem 1rem;">SEO Optimization</span>
+    <section id="servicios" class="py-24 lg:py-32 relative border-t border-white/[0.06]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de Sección -->
+        <div class="max-w-3xl mb-16 reveal-up">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+            <span>// Catálogo de Ingeniería</span>
           </div>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+            Soluciones Digitales Modulares para el Crecimiento Empresarial
+          </h2>
+          <p class="mt-4 text-slate-400 text-base sm:text-lg leading-relaxed">
+            Desarrollamos tecnología adaptada a la etapa y complejidad de tu organización, garantizando escalabilidad técnica desde el primer día.
+          </p>
         </div>
+
+        <!-- Grilla de 3 Tarjetas Profesionales -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          ${cardsHtml}
+        </div>
+
       </div>
     </section>
   `;

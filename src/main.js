@@ -1,19 +1,8 @@
-// Importar Hojas de Estilo para que Vite las procese
-import './styles/navbar.css';
-import './styles/hero.css';
-import './styles/services.css';
-import './styles/process.css';
-import './styles/planner.css';
-import './styles/contact.css';
-import './styles/footer.css';
-
-// Importar Componentes
+// Importar Componentes B2B de ApexDigital
 import { Navbar, initNavbar } from './components/Navbar.js';
 import { Hero } from './components/Hero.js';
 import { Services } from './components/Services.js';
-import { Process } from './components/Process.js';
-import { ProjectPlanner, initProjectPlanner } from './components/ProjectPlanner.js';
-import { Contact, initContact } from './components/Contact.js';
+import { Authority } from './components/Authority.js';
 import { Footer } from './components/Footer.js';
 
 // Renderizar la Estructura en el DOM
@@ -24,36 +13,26 @@ if (app) {
     <main>
       ${Hero()}
       ${Services()}
-      ${Process()}
-      ${ProjectPlanner()}
-      ${Contact()}
+      ${Authority()}
     </main>
     ${Footer()}
   `;
 
-  // Inicializar la interactividad de cada componente
+  // Inicializar interactividad del menú móvil y navegación
   initNavbar();
-  initProjectPlanner();
-  initContact();
 
-  // Observador de Intersección para animaciones automáticas al hacer scroll (Aesthetics Boost)
-  const animElements = document.querySelectorAll('.animate-fade-in');
+  // Observador de Intersección para animaciones sutiles de entrada (reveal-up)
+  const revealElements = document.querySelectorAll('.reveal-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15
+    threshold: 0.12
   });
 
-  animElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(el);
-  });
+  revealElements.forEach(el => observer.observe(el));
 }
