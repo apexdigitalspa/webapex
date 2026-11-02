@@ -2,8 +2,8 @@ import { config } from '../config.js';
 
 export function ApexLogoMark(sizeClass = "w-10 h-10") {
   return `
-    <div class="relative flex items-center justify-center ${sizeClass} rounded-full bg-slate-900 border border-slate-200 overflow-hidden shrink-0">
-      <img src="/logo-circle.jpg" alt="ApexDigital Logo" class="w-full h-full object-cover scale-[1.14]" />
+    <div class="relative flex items-center justify-center ${sizeClass} rounded-full overflow-hidden shrink-0">
+      <img src="/logo-circle.png" alt="ApexDigital Logo" class="w-full h-full object-contain" />
     </div>
   `;
 }
