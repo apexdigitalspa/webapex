@@ -1,7 +1,7 @@
 import { config } from '../config.js';
 
 export function Hero() {
-  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me gustaría conversar sobre un proyecto web / software para mi empresa.')}`;
+  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me gustaría conversar sobre un proyecto web, software o aplicación móvil para mi empresa.')}`;
 
   return `
     <section id="inicio" class="py-16 sm:py-24 lg:py-28 bg-white border-b border-slate-200">
@@ -10,17 +10,17 @@ export function Hero() {
         <div class="max-w-3xl">
           <!-- Etiqueta Sobria -->
           <p class="text-xs font-semibold uppercase tracking-widest text-sky-700 mb-4">
-            Ingeniería de Software &amp; Desarrollo Web · ${config.brand.location}
+            Software, Páginas Web y Apps Móviles · ${config.brand.location}
           </p>
 
           <!-- Título Principal -->
           <h1 class="font-heading font-bold text-3xl sm:text-5xl text-slate-900 tracking-tight leading-[1.15]">
-            Desarrollo de Software y Páginas Web a Medida para Empresas.
+            Desarrollo de Software, Páginas Web y Apps Móviles a Medida para Empresas.
           </h1>
 
           <!-- Subtítulo -->
           <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-            Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile.
+            Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables. Creamos sitios web, sistemas de gestión y aplicaciones para celular que funcionan 100% sincronizados en tiempo real.
           </p>
 
           <!-- Botones de Acción Simples y Directos -->
@@ -48,12 +48,12 @@ export function Hero() {
           <!-- Resumen claro y humano de cómo trabajamos -->
           <div class="mt-14 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
             <div>
-              <p class="font-semibold text-slate-900">Trato directo y cercano</p>
-              <p class="text-slate-500 mt-1">Hablas directamente con el ingeniero a cargo de tu proyecto, sin intermediarios.</p>
+              <p class="font-semibold text-slate-900">Web + App Sincronizadas</p>
+              <p class="text-slate-500 mt-1">Conectamos tu página web y tu aplicación móvil a una misma base de datos en tiempo real.</p>
             </div>
             <div>
-              <p class="font-semibold text-slate-900">Trabajo bien hecho</p>
-              <p class="text-slate-500 mt-1">Sitios rápidos, seguros y programados a medida según lo que tu negocio necesita.</p>
+              <p class="font-semibold text-slate-900">Trato directo y cercano</p>
+              <p class="text-slate-500 mt-1">Hablas directamente con el ingeniero a cargo de tu proyecto, sin intermediarios.</p>
             </div>
             <div>
               <p class="font-semibold text-slate-900">Propiedad total</p>

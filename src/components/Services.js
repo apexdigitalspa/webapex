@@ -11,7 +11,7 @@ export function Services() {
       points: [
         "Diseño sobrio y adaptado a celulares",
         "Optimización SEO y alta velocidad de carga",
-        "Integración de formularios y botón de contacto directo"
+        "Integración de formularios y contacto directo"
       ],
       query: "Hola ApexDigital, me interesa cotizar un Sitio Web / Landing Page corporativa."
     },
@@ -20,22 +20,33 @@ export function Services() {
       title: "Sistemas Web a Medida y Paneles de Gestión",
       description: "Desarrollamos sistemas internos e intranets con bases de datos para ordenar la operación de tu empresa: control de clientes, inventarios, reservas, reportes o estados de pedidos.",
       points: [
-        "Bases de datos seguras y respaldadas",
+        "Bases de datos seguras y centralizadas",
         "Panel de administración fácil de usar",
-        "Acceso con usuarios y contraseñas para tu equipo"
+        "Acceso con usuarios y permisos para tu equipo"
       ],
       query: "Hola ApexDigital, me interesa cotizar un Sistema Web a Medida con panel de gestión."
     },
     {
       step: "03",
+      title: "Apps para Celular y Sincronización Web + App",
+      description: "Desarrollamos aplicaciones móviles (Android y iOS) conectadas directamente con tu plataforma web. Todo cambio o registro en el celular se actualiza al instante en el panel web de tu oficina.",
+      points: [
+        "Aplicaciones móviles intuitivas para clientes o personal en terreno",
+        "Sincronización en tiempo real entre la Web y la App",
+        "Notificaciones, pedidos, reportes y gestión desde el teléfono"
+      ],
+      query: "Hola ApexDigital, me interesa cotizar el desarrollo de una App móvil sincronizada con sistema web."
+    },
+    {
+      step: "04",
       title: "Automatización y Soluciones Orientadas a Ventas",
       description: "Modernizamos tus canales digitales para ahorrar tiempo administrativo, automatizar cotizaciones frecuentes y facilitar que tus clientes compren o agenden en línea.",
       points: [
-        "Flujos de cotización y contacto rápidos",
-        "Integración de pagos en línea (Webpay / Flow) si lo requieres",
+        "Flujos de cotización y reservas en línea",
+        "Integración de pagos (Webpay / Flow) si lo requieres",
         "Conexión directa con tu WhatsApp y correo corporativo"
       ],
-      query: "Hola ApexDigital, me interesa consultar por soluciones de automatización y conversión."
+      query: "Hola ApexDigital, me interesa consultar por soluciones de automatización y ventas en línea."
     }
   ];
 
@@ -43,7 +54,7 @@ export function Services() {
     <article class="clean-card p-7 sm:p-8 flex flex-col justify-between">
       <div>
         <span class="inline-block text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-100 px-2.5 py-1 rounded-md mb-4">
-          Servicio ${item.step}
+          Solución ${item.step}
         </span>
 
         <h3 class="font-heading font-bold text-xl text-slate-900 mb-3 leading-snug">
@@ -70,7 +81,7 @@ export function Services() {
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors"
       >
-        Consultar por este servicio
+        Consultar por esta solución
       </a>
     </article>
   `).join('');
@@ -87,11 +98,11 @@ export function Services() {
             Soluciones prácticas y bien construidas para tu negocio
           </h2>
           <p class="mt-3 text-slate-600 text-base leading-relaxed">
-            Nos enfocamos en desarrollar herramientas útiles, estables y fáciles de administrar.
+            Desde una página corporativa hasta un ecosistema completo con sistema web y aplicación móvil funcionando sincronizados.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           ${cardsHtml}
         </div>
 
