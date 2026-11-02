@@ -1,13 +1,15 @@
 /* ==========================================================================
-   ApexDigital B2B Engineering Design System (Complemento Tailwind CSS)
-   Paleta: #0B0F19 (Fondo base), #38BDF8 / #0284C7 / #1D4ED8 (Acentos Isotipo)
+   ApexDigital — B2B Executive Architectural Design System
+   Inspiración: Estudios de consultoría tecnológica boutique (Suizo / Editorial)
+   Base: #0B0F19 | Líneas: Hairline 1px rgba(255,255,255,0.08) | Acento: #0EA5E9
    ========================================================================== */
 
 :root {
   --apex-bg: #0B0F19;
-  --apex-card: rgba(17, 24, 39, 0.72);
-  --apex-border: rgba(255, 255, 255, 0.08);
-  --apex-border-hover: rgba(56, 189, 248, 0.4);
+  --apex-surface: #0F1523;
+  --apex-panel: #131B2E;
+  --apex-line: rgba(255, 255, 255, 0.08);
+  --apex-line-strong: rgba(255, 255, 255, 0.16);
 }
 
 html {
@@ -17,56 +19,69 @@ html {
 
 body {
   background-color: #0B0F19;
-  color: #F8FAFC;
-  /* Retícula de ingeniería milimétrica sutil */
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 48px 48px;
-  background-position: center top;
+  color: #F1F5F9;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Degradado idéntico al isotipo de ApexDigital (la 'A' con flecha azul) */
-.text-apex-gradient {
-  background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 45%, #0284C7 100%);
+/* Degradado corporativo sobrio (solo para detalles puntuales del isotipo) */
+.text-apex-brand {
+  background: linear-gradient(135deg, #F8FAFC 0%, #7DD3FC 55%, #0EA5E9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.bg-apex-gradient {
-  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 50%, #1D4ED8 100%);
+/* Botón corporativo ejecutivo: sólido, preciso, sin neones exagerados */
+.btn-executive-primary {
+  background: linear-gradient(180deg, #0EA5E9 0%, #0284C7 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
 }
 
-.bg-apex-gradient:hover {
-  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #2563EB 100%);
+.btn-executive-primary:hover {
+  background: linear-gradient(180deg, #38BDF8 0%, #0369A1 100%);
+  border-color: rgba(186, 230, 253, 0.5);
+  transform: translateY(-1px);
 }
 
-/* Tarjetas B2B con Glassmorphism muy suave y profundidad técnica */
-.apex-glass-card {
-  background: linear-gradient(180deg, rgba(21, 30, 50, 0.75) 0%, rgba(13, 19, 33, 0.85) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.btn-executive-secondary {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.btn-executive-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+}
+
+/* Panel arquitectónico sobrio */
+.executive-panel {
+  background-color: #0F1523;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
-.apex-glass-card:hover {
-  border-color: rgba(56, 189, 248, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.15), inset 0 1px 0 0 rgba(56, 189, 248, 0.2);
+.executive-panel:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  background-color: #12192A;
 }
 
-/* Efecto de iluminación radial técnica detrás de secciones clave */
-.apex-radial-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.14) 0%, rgba(29, 78, 216, 0.05) 45%, transparent 75%);
+/* Guías verticales sutiles de estudio de arquitectura */
+.architectural-container {
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Animación de entrada limpia */
+/* Animación de entrada sobria */
 .reveal-up {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(14px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-up.is-visible {

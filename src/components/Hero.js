@@ -1,129 +1,153 @@
 import { config } from '../config.js';
 
 export function Hero() {
-  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, busco asesoría para el desarrollo de un proyecto web / software a medida.')}`;
+  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me gustaría agendar una breve conversación sobre un requerimiento de software / web para nuestra empresa.')}`;
 
   return `
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden apex-radial-glow">
-      <!-- Luz ambiental técnica sutil -->
-      <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[750px] h-[380px] bg-sky-500/10 blur-[130px] rounded-full"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 border-b border-white/[0.08]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-start">
           
-          <!-- Columna Izquierda: Propuesta de Valor B2B -->
-          <div class="lg:col-span-7 space-y-8 reveal-up">
-            <!-- Insignia Técnica -->
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sky-500/[0.08] border border-sky-400/20 text-sky-300 text-xs font-mono uppercase tracking-widest">
-              <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-              <span>Ingeniería de Software & Soluciones B2B</span>
+          <!-- Columna Izquierda: Discurso Ejecutivo y Propuesta de Valor -->
+          <div class="lg:col-span-7 space-y-7 reveal-up">
+            
+            <!-- Índice Editorial (Estilo consultora boutique) -->
+            <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] text-sky-400">
+              <span>00 // FIRMA DE INGENIERÍA DE SOFTWARE</span>
+              <span class="w-8 h-[1px] bg-sky-400/40"></span>
+              <span class="text-slate-400">CHILE</span>
             </div>
 
             <!-- Título Principal Obligatorio -->
-            <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.5rem] text-white tracking-tight leading-[1.12]">
-              Desarrollo de Software y <span class="text-apex-gradient">Páginas Web a Medida</span> para Empresas.
+            <h1 class="font-heading font-bold text-3xl sm:text-5xl lg:text-[3.35rem] text-white tracking-tight leading-[1.12]">
+              Desarrollo de Software y Páginas Web a Medida para Empresas.
             </h1>
 
             <!-- Subtítulo Obligatorio -->
-            <p class="text-lg sm:text-xl text-slate-300/90 leading-relaxed max-w-2xl font-normal">
+            <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl font-normal">
               Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile.
             </p>
 
-            <!-- Llamado a la acción dual -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <!-- Contexto Ejecutivo Humano -->
+            <p class="text-sm text-slate-400 leading-relaxed max-w-xl border-l-2 border-sky-500/50 pl-4">
+              Acompañamos a gerencias, equipos de operaciones y empresas en crecimiento que requieren sistemas confiables, bien documentados y diseñados para durar, sin las limitaciones de las agencias de marketing tradicionales.
+            </p>
+
+            <!-- Llamado a la Acción Dual -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3">
               <a 
                 href="${whatsappUrl}" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl text-base font-semibold text-white bg-apex-gradient shadow-[0_10px_30px_-5px_rgba(14,165,233,0.45)] hover:shadow-[0_15px_35px_-5px_rgba(56,189,248,0.65)] transition-all duration-200 border border-sky-300/25"
+                class="btn-executive-primary inline-flex items-center justify-center gap-3 px-7 py-4 rounded-md text-sm font-semibold tracking-wide"
               >
-                <span>Iniciar Proyecto por WhatsApp</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span>Conversar con Ingeniería por WhatsApp</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
               </a>
 
               <a 
                 href="#servicios" 
-                class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-200 bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-sky-400/40 transition-all duration-200"
+                class="btn-executive-secondary inline-flex items-center justify-center px-7 py-4 rounded-md text-sm font-semibold tracking-wide"
               >
                 <span>Ver Soluciones</span>
               </a>
             </div>
-
-            <!-- Métricas de Rigor Técnico -->
-            <div class="pt-6 border-t border-white/[0.08] grid grid-cols-3 gap-6 max-w-lg">
-              <div>
-                <p class="font-heading font-bold text-2xl text-white">99.9%</p>
-                <p class="text-xs text-slate-400 mt-0.5">Uptime & Estabilidad</p>
-              </div>
-              <div>
-                <p class="font-heading font-bold text-2xl text-sky-400">&lt; 1.2s</p>
-                <p class="text-xs text-slate-400 mt-0.5">Carga Core Web Vitals</p>
-              </div>
-              <div>
-                <p class="font-heading font-bold text-2xl text-white">100%</p>
-                <p class="text-xs text-slate-400 mt-0.5">Código a Medida</p>
-              </div>
-            </div>
           </div>
 
-          <!-- Columna Derecha: Panel de Arquitectura e Identidad Corporativa (Cero ilustraciones infantiles) -->
+          <!-- Columna Derecha: Ficha de Arquitectura & Estándar de Entrega (Serio, Ejecutivo, Realista) -->
           <div class="lg:col-span-5 reveal-up">
-            <div class="apex-glass-card rounded-2xl p-6 sm:p-7 relative overflow-hidden">
-              <!-- Cabecera de Terminal / Sistema -->
-              <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/[0.08]">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
-                  <span class="ml-2 text-xs font-mono text-slate-400">apex-core-architecture.ts</span>
+            <div class="executive-panel rounded-lg overflow-hidden">
+              
+              <!-- Encabezado de Ficha Técnica -->
+              <div class="px-6 py-4 bg-[#0B0F19] border-b border-white/[0.08] flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="/logo-circle.jpg" alt="ApexDigital" class="w-8 h-8 rounded-full object-cover border border-white/15" />
+                  <div>
+                    <h2 class="text-xs font-mono uppercase tracking-wider text-white font-semibold">Estándar de Ejecución Técnica</h2>
+                    <p class="text-[11px] text-slate-400">Protocolo corporativo ApexDigital</p>
+                  </div>
                 </div>
-                <span class="px-2.5 py-0.5 text-[11px] font-mono rounded bg-sky-500/10 text-sky-400 border border-sky-400/20">
-                  PRODUCTION READY
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-500/10 border border-sky-400/20 px-2.5 py-0.5 rounded">
+                  B2B · CHILE
                 </span>
               </div>
 
-              <!-- Sello Visual del Logotipo + Telemetría -->
-              <div class="flex items-center gap-4 p-4 rounded-xl bg-[#0B0F19]/90 border border-white/[0.06] mb-5">
-                <img src="/logo-circle.jpg" alt="ApexDigital Logo Oficial" class="w-16 h-16 rounded-full object-cover border border-sky-400/30 shrink-0 shadow-md" />
-                <div>
-                  <div class="text-xs font-mono text-sky-400 uppercase tracking-wider">Infraestructura B2B</div>
-                  <div class="text-base font-heading font-bold text-white mt-0.5">ApexDigital Engineering</div>
-                  <div class="text-xs text-slate-400 mt-0.5">Puerto Montt · Cobertura Nacional Chile</div>
+              <!-- Cuerpo de Ficha: 3 Etapas Reales de Trabajo con Gerencia -->
+              <div class="p-6 divide-y divide-white/[0.07]">
+                
+                <div class="pb-4">
+                  <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
+                    <span>FASE I · LEVANTAMIENTO</span>
+                    <span class="text-sky-400">Semana 1</span>
+                  </div>
+                  <h3 class="text-sm font-heading font-bold text-white">Diagnóstico Operativo y Alcance</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                    Definición formal de requerimientos, reglas de negocio, arquitectura de datos y plazos cerrados por contrato antes de iniciar el desarrollo.
+                  </p>
                 </div>
+
+                <div class="py-4">
+                  <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
+                    <span>FASE II · INGENIERÍA</span>
+                    <span class="text-sky-400">Desarrollo Iterativo</span>
+                  </div>
+                  <h3 class="text-sm font-heading font-bold text-white">Construcción Modular y Entorno de Pruebas</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                    Acceso a un servidor privado de pre-producción para que tu equipo revise avances reales en tiempo real, con validaciones de seguridad y rendimiento.
+                  </p>
+                </div>
+
+                <div class="pt-4">
+                  <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
+                    <span>FASE III · PUESTA EN MARCHA</span>
+                    <span class="text-emerald-400">Entrega Llave en Mano</span>
+                  </div>
+                  <h3 class="text-sm font-heading font-bold text-white">Despliegue, Propiedad del Código y Soporte</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                    Paso a producción sin interrumpir tu operación actual. Entrega íntegra de accesos, código fuente y acompañamiento técnico continuo.
+                  </p>
+                </div>
+
               </div>
 
-              <!-- Código de Ingeniería Realista -->
-              <div class="rounded-xl bg-[#070A12] p-4 border border-white/[0.05] font-mono text-xs leading-relaxed text-slate-300 overflow-x-auto">
-<pre class="m-0"><code><span class="text-sky-400">export async function</span> <span class="text-white">deployEnterpriseSystem</span>(config) {
-  <span class="text-slate-500">// Arquitectura modular &amp; segura</span>
-  <span class="text-sky-400">const</span> cluster = <span class="text-sky-400">await</span> ApexCloud.<span class="text-sky-300">initialize</span>({
-    region: <span class="text-amber-300">'cl-south-1'</span>,
-    security: <span class="text-amber-300">'SSL-TLS-1.3 / OWASP'</span>,
-    database: <span class="text-amber-300">'PostgreSQL-HA'</span>,
-    vitalsScore: <span class="text-emerald-400">100</span>
-  });
-
-  <span class="text-sky-400">return</span> cluster.<span class="text-sky-300">scale</span>({ status: <span class="text-emerald-400">'ONLINE'</span> });
-}</code></pre>
+              <!-- Pie de Ficha -->
+              <div class="px-6 py-3.5 bg-[#0B0F19]/80 border-t border-white/[0.08] flex items-center justify-between text-xs">
+                <span class="text-slate-400">Trato directo con ingeniería</span>
+                <span class="font-mono text-slate-200">${config.brand.location}</span>
               </div>
 
-              <!-- Indicadores de Estado de Ingeniería -->
-              <div class="mt-5 grid grid-cols-2 gap-3 text-xs">
-                <div class="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-                  <span class="text-slate-400">Seguridad API</span>
-                  <span class="font-mono text-emerald-400 font-medium">Encriptado</span>
-                </div>
-                <div class="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] flex items-center justify-between">
-                  <span class="text-slate-400">Rendimiento SEO</span>
-                  <span class="font-mono text-sky-400 font-medium">99 / 100</span>
-                </div>
-              </div>
             </div>
           </div>
 
         </div>
+
+        <!-- Barra Inferior de Compromisos Ejecutivos (Reemplaza las métricas falsas de IA) -->
+        <div class="mt-16 pt-10 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1">01 / Propiedad Intelectual</p>
+            <p class="text-sm font-heading font-semibold text-white">100% Titularidad del Cliente</p>
+            <p class="text-xs text-slate-400 mt-1">Sin licencias mensuales atadas ni dependencia forzada de proveedor.</p>
+          </div>
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1">02 / Rendimiento Técnico</p>
+            <p class="text-sm font-heading font-semibold text-white">Optimización Core Web Vitals</p>
+            <p class="text-xs text-slate-400 mt-1">Tiempos de respuesta inmediatos en equipos de escritorio y móviles.</p>
+          </div>
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1">03 / Interlocución</p>
+            <p class="text-sm font-heading font-semibold text-white">Sin Vendedores Intermediarios</p>
+            <p class="text-xs text-slate-400 mt-1">Comunicación directa con quien diseña y programa tu plataforma.</p>
+          </div>
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider text-sky-400 mb-1">04 / Escalabilidad</p>
+            <p class="text-sm font-heading font-semibold text-white">Arquitectura Preparada</p>
+            <p class="text-xs text-slate-400 mt-1">Código estructurado para crecer en módulos y volumen de usuarios.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   `;

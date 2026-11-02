@@ -5,129 +5,129 @@ export function Services() {
 
   const services = [
     {
-      id: "01",
-      tag: "WEB CORPORATIVA & SEO",
-      title: "Sitios Web y Landing Pages de Alto Rendimiento",
-      description: "Diseñamos y programamos plataformas corporativas enfocadas en velocidad de carga instantánea, arquitectura SEO técnica y posicionamiento comercial para captar clientes B2B.",
-      features: [
-        "Optimización técnica SEO y Core Web Vitals",
-        "Diseño UI/UX sobrio, adaptable a móviles (Responsivo)",
-        "Arquitectura orientada a la conversión de clientes"
+      index: "01",
+      category: "PRESENCIA CORPORATIVA & POSICIONAMIENTO",
+      title: "Sitios Web y Landing Pages Corporativas de Alto Rendimiento",
+      summary: "Desarrollamos portales institucionales y páginas de aterrizaje sobrias, veloces y estructuradas técnicamente para posicionar a tu empresa en Google y convertir visitas en oportunidades comerciales.",
+      idealFor: "Empresas B2B, firmas de servicios profesionales, industrias y marcas que requieren proyectar solidez corporativa.",
+      deliverables: [
+        "Arquitectura de información orientada a tomadores de decisión",
+        "Optimización técnica SEO y velocidad de carga sobresaliente",
+        "Adaptabilidad móvil milimétrica y formularios con validación segura"
       ],
-      query: "Hola ApexDigital, me interesa cotizar un Sitio Web Corporativo / Landing Page de alto rendimiento.",
-      icon: `
-        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-        </svg>
-      `
+      query: "Hola ApexDigital, nos interesa cotizar un Sitio Web Corporativo / Landing Page de alto rendimiento para nuestra empresa."
     },
     {
-      id: "02",
-      tag: "INGENIERÍA DE SOFTWARE",
-      title: "Sistemas Web a Medida y Paneles de Gestión",
-      description: "Construimos aplicaciones web empresariales robustas con integración de bases de datos relacionales, control de usuarios por roles, paneles administrativos e inventario o logística.",
-      features: [
-        "Modelado e integración de bases de datos seguras",
-        "Paneles de control (Dashboards) y métricas en tiempo real",
-        "Integración de APIs, pasarelas de pago y facturación"
+      index: "02",
+      category: "PLATAFORMAS INTERNAS & OPERACIONES",
+      title: "Sistemas Web a Medida, Bases de Datos y Paneles de Gestión",
+      summary: "Construimos software web específico para resolver cuellos de botella operativos: desde intranets y portales de clientes hasta sistemas de control de inventario, órdenes de trabajo o reportería ejecutiva.",
+      idealFor: "Operaciones logísticas, empresas en expansión y equipos que necesitan reemplazar planillas dispersas por un sistema centralizado.",
+      deliverables: [
+        "Diseño e integración de bases de datos relacionales seguras",
+        "Paneles de administración (Dashboards) con accesos por rol de usuario",
+        "Integración con pasarelas de pago, APIs externas o servicios en la nube"
       ],
-      query: "Hola ApexDigital, me interesa cotizar un Sistema Web a Medida con base de datos y panel de gestión.",
-      icon: `
-        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-        </svg>
-      `
+      query: "Hola ApexDigital, nos interesa evaluar el desarrollo de un Sistema Web a Medida con base de datos y panel de gestión."
     },
     {
-      id: "03",
-      tag: "EFICIENCIA & ESCALABILIDAD",
-      title: "Automatización y Experiencias Digitales Modernas",
-      description: "Digitalizamos flujos operativos manuales y creamos experiencias interactivas orientadas a la conversión comercial, reduciendo tiempos de respuesta y costos operativos.",
-      features: [
-        "Flujos de cotización y captación automatizados",
-        "Conector directo con WhatsApp Business y CRM",
-        "Interfaces rápidas sin fricción para el usuario final"
+      index: "03",
+      category: "EFICIENCIA COMERCIAL & DIGITALIZACIÓN",
+      title: "Automatización y Experiencias Digitales Orientadas a Conversión",
+      summary: "Implementamos flujos digitales interactivos que califican prospectos automáticamente, agilizan cotizaciones técnicas y conectan tus canales de venta directamente con tu equipo comercial.",
+      idealFor: "Equipos comerciales que buscan reducir tiempos de respuesta al cliente y estandarizar su proceso de cotización.",
+      deliverables: [
+        "Cotizadores interactivos y flujos de captura de requerimientos",
+        "Integración directa con WhatsApp corporativo y correo electrónico",
+        "Interfaces limpias y sin fricción enfocadas en el cierre de negocios"
       ],
-      query: "Hola ApexDigital, me interesa automatizar procesos y mejorar la conversión digital de mi empresa.",
-      icon: `
-        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-      `
+      query: "Hola ApexDigital, nos interesa automatizar nuestros flujos de captación y mejorar la conversión digital."
     }
   ];
 
-  const cardsHtml = services.map(item => `
-    <article class="apex-glass-card rounded-2xl p-8 flex flex-col justify-between reveal-up group">
+  const cardsHtml = services.map(service => `
+    <article class="executive-panel rounded-lg p-7 sm:p-8 flex flex-col justify-between reveal-up">
       <div>
-        <!-- Cabecera de la tarjeta -->
-        <div class="flex items-center justify-between mb-6">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center group-hover:bg-sky-500/20 transition-colors">
-            ${item.icon}
-          </div>
-          <span class="font-mono text-xs font-semibold tracking-widest text-slate-500 group-hover:text-sky-400 transition-colors">
-            // ${item.id}
+        <!-- Índice y Categoría -->
+        <div class="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
+          <span class="text-[11px] font-mono uppercase tracking-widest text-sky-400 font-semibold">
+            ${service.category}
+          </span>
+          <span class="text-xs font-mono text-slate-500">
+            [${service.index}]
           </span>
         </div>
 
-        <span class="text-[11px] font-mono uppercase tracking-widest text-sky-400 font-semibold block mb-2">
-          ${item.tag}
-        </span>
-
+        <!-- Título -->
         <h3 class="font-heading font-bold text-xl text-white mb-3 leading-snug">
-          ${item.title}
+          ${service.title}
         </h3>
 
-        <p class="text-slate-300/85 text-sm leading-relaxed mb-6">
-          ${item.description}
+        <!-- Resumen Ejecutivo -->
+        <p class="text-sm text-slate-300 leading-relaxed mb-5">
+          ${service.summary}
         </p>
 
-        <!-- Lista de entregables técnicos -->
-        <ul class="space-y-2.5 mb-8 border-t border-white/[0.07] pt-5">
-          ${item.features.map(f => `
-            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-              <svg class="w-4 h-4 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-              </svg>
-              <span>${f}</span>
-            </li>
-          `).join('')}
-        </ul>
+        <!-- Caso de Uso / Ideal para -->
+        <div class="p-3.5 rounded bg-[#0B0F19] border border-white/[0.06] mb-6">
+          <p class="text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1">Perfil de implementación:</p>
+          <p class="text-xs text-slate-200 leading-relaxed">${service.idealFor}</p>
+        </div>
+
+        <!-- Entregables -->
+        <div class="mb-8">
+          <p class="text-xs font-semibold text-white uppercase tracking-wider mb-3">Alcance técnico incluido:</p>
+          <ul class="space-y-2.5">
+            ${service.deliverables.map(item => `
+              <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400 mt-2 shrink-0"></span>
+                <span>${item}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
       </div>
 
-      <a 
-        href="${whatsappBase}${encodeURIComponent(item.query)}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider text-slate-200 bg-white/[0.03] hover:bg-sky-500/15 border border-white/[0.08] hover:border-sky-400/40 transition-all"
-      >
-        <span>Consultar esta solución</span>
-        <svg class="w-4 h-4 text-sky-400 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </a>
+      <!-- Acción de Consulta -->
+      <div class="pt-4 border-t border-white/[0.08]">
+        <a 
+          href="${whatsappBase}${encodeURIComponent(service.query)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-between w-full text-xs font-semibold uppercase tracking-wider text-sky-400 hover:text-sky-300 transition-colors group"
+        >
+          <span>Solicitar evaluación de este módulo</span>
+          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
     </article>
   `).join('');
 
   return `
-    <section id="servicios" class="py-24 lg:py-32 relative border-t border-white/[0.06]">
+    <section id="servicios" class="py-24 lg:py-32 border-b border-white/[0.08]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Encabezado de Sección -->
-        <div class="max-w-3xl mb-16 reveal-up">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
-            <span>// Catálogo de Ingeniería</span>
+        <!-- Encabezado Editorial -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 reveal-up">
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] text-sky-400 mb-3">
+              <span>01 // ÁREAS DE PRÁCTICA E INGENIERÍA</span>
+            </div>
+            <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight">
+              Soluciones Digitales Modulares
+            </h2>
           </div>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Soluciones Digitales Modulares para el Crecimiento Empresarial
-          </h2>
-          <p class="mt-4 text-slate-400 text-base sm:text-lg leading-relaxed">
-            Desarrollamos tecnología adaptada a la etapa y complejidad de tu organización, garantizando escalabilidad técnica desde el primer día.
-          </p>
+          <div class="lg:col-span-5">
+            <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+              Cada proyecto se diseña bajo una estructura modular. Puedes iniciar con una plataforma corporativa de alto impacto e integrar bases de datos o paneles administrativos a medida que tu operación lo requiera.
+            </p>
+          </div>
         </div>
 
-        <!-- Grilla de 3 Tarjetas Profesionales -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 3 Tarjetas Ejecutivas -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
           ${cardsHtml}
         </div>
 
