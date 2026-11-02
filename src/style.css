@@ -1,90 +1,28 @@
 /* ==========================================================================
-   ApexDigital — B2B Executive Architectural Design System
-   Inspiración: Estudios de consultoría tecnológica boutique (Suizo / Editorial)
-   Base: #0B0F19 | Líneas: Hairline 1px rgba(255,255,255,0.08) | Acento: #0EA5E9
+   ApexDigital — Diseño Corporativo Limpio, Humano y Sobrio (Fondo Blanco)
    ========================================================================== */
-
-:root {
-  --apex-bg: #0B0F19;
-  --apex-surface: #0F1523;
-  --apex-panel: #131B2E;
-  --apex-line: rgba(255, 255, 255, 0.08);
-  --apex-line-strong: rgba(255, 255, 255, 0.16);
-}
 
 html {
   scroll-behavior: smooth;
-  background-color: #0B0F19;
+  background-color: #FFFFFF;
 }
 
 body {
-  background-color: #0B0F19;
-  color: #F1F5F9;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: #FFFFFF;
+  color: #1E293B;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Degradado corporativo sobrio (solo para detalles puntuales del isotipo) */
-.text-apex-brand {
-  background: linear-gradient(135deg, #F8FAFC 0%, #7DD3FC 55%, #0EA5E9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Tarjeta básica, limpia y profesional sobre fondo claro */
+.clean-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Botón corporativo ejecutivo: sólido, preciso, sin neones exagerados */
-.btn-executive-primary {
-  background: linear-gradient(180deg, #0EA5E9 0%, #0284C7 100%);
-  color: #FFFFFF;
-  border: 1px solid rgba(125, 211, 252, 0.3);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition: all 0.2s ease;
-}
-
-.btn-executive-primary:hover {
-  background: linear-gradient(180deg, #38BDF8 0%, #0369A1 100%);
-  border-color: rgba(186, 230, 253, 0.5);
-  transform: translateY(-1px);
-}
-
-.btn-executive-secondary {
-  background-color: rgba(255, 255, 255, 0.02);
-  color: #E2E8F0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.2s ease;
-}
-
-.btn-executive-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #FFFFFF;
-}
-
-/* Panel arquitectónico sobrio */
-.executive-panel {
-  background-color: #0F1523;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: border-color 0.25s ease, background-color 0.25s ease;
-}
-
-.executive-panel:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-  background-color: #12192A;
-}
-
-/* Guías verticales sutiles de estudio de arquitectura */
-.architectural-container {
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* Animación de entrada sobria */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.clean-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
 }

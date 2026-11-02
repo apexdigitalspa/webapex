@@ -1,70 +1,57 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth dark">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ApexDigital | Desarrollo de Software y Páginas Web a Medida para Empresas</title>
+  <title>ApexDigital | Desarrollo de Software y Páginas Web para Empresas</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile. Ingeniería de software y páginas web a medida en Puerto Montt, Chile.">
-  <meta name="keywords" content="desarrollo de software chile, paginas web empresas, sistemas web a medida, ingenieria informatica, apexdigital, puerto montt, desarrollo web b2b, automatizacion digital">
+  <meta name="description" content="Desarrollo de software y páginas web a medida para empresas en Chile. Soluciones digitales rápidas, seguras y escalables desde Puerto Montt.">
+  <meta name="keywords" content="desarrollo de software chile, paginas web empresas, sistemas web a medida, ingenieria informatica, apexdigital, puerto montt">
   <meta name="author" content="ApexDigital">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apexdigital.cl/">
-  <meta property="og:title" content="ApexDigital | Desarrollo de Software y Soluciones Digitales">
+  <meta property="og:title" content="ApexDigital | Desarrollo de Software y Páginas Web para Empresas">
   <meta property="og:description" content="Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile.">
   <meta property="og:image" content="/logo-circle.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="ApexDigital | Desarrollo de Software y Soluciones Digitales">
-  <meta property="twitter:description" content="Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="/logo-circle.jpg">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS Play CDN con configuración corporativa B2B -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            apex: {
-              bg: '#0B0F19',
-              surface: '#111827',
-              card: '#151E32',
-              border: 'rgba(255, 255, 255, 0.08)',
-              cyan: '#38BDF8',
+            brand: {
+              dark: '#0F172A',
               blue: '#0284C7',
-              deep: '#1D4ED8'
+              blueHover: '#0369A1',
+              light: '#F8FAFC'
             }
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-            heading: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
+            heading: ['Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
 
-  <!-- Estilos Globales y Utilidades Glassmorphism -->
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body class="bg-[#0B0F19] text-slate-100 font-sans antialiased selection:bg-sky-500/30 selection:text-sky-200 overflow-x-hidden">
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900">
   <div id="app"></div>
-  
-  <!-- Script Principal -->
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
