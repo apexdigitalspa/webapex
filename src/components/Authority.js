@@ -1,69 +1,79 @@
 import { config } from '../config.js';
 
 export function Authority() {
-  const pillars = [
+  const principles = [
     {
-      title: "Ingeniería informática real, sin plantillas genéricas",
-      desc: "Construimos software bien estructurado desde la base. Eso se traduce en plataformas estables que no se caen ni quedan obsoletas a los pocos meses."
+      num: "01",
+      title: "Hablamos en claro, sin rodeos técnicos",
+      desc: "No necesitas saber de programación para trabajar con nosotros. Escuchamos cómo funciona tu negocio, te proponemos una solución práctica y te explicamos cada etapa en un lenguaje directo."
     },
     {
-      title: "Velocidad y rendimiento (Core Web Vitals)",
-      desc: "Optimizamos cada detalle para que tu sitio web, sistema o aplicación cargue de forma rápida en celulares y computadores, mejorando tu presencia en Google."
+      num: "02",
+      title: "Trato directo con quien programa tu proyecto",
+      desc: "En muchas agencias hablas con un vendedor que nunca más ves después de pagar. En ApexDigital tratas directamente con el ingeniero a cargo de construir tu sistema, de principio a fin."
     },
     {
-      title: "Trato humano y directo sin intermediarios",
-      desc: "Te comunicas directamente con el ingeniero responsable de tu proyecto. Sin vendedores que prometen cosas irreales ni burocracia innecesaria."
-    },
-    {
-      title: "Arquitectura segura y escalable",
-      desc: "Aplicamos buenas prácticas de seguridad y diseñamos sistemas modulares que pueden crecer e incorporar nuevas funciones conforme tu empresa evoluciona."
+      num: "03",
+      title: "Sistemas rápidos, estables y hechos para durar",
+      desc: "Cuidamos la ingeniería detrás de cada proyecto: que cargue rápido en celulares, que tenga buena presencia en Google (SEO), que sea seguro y que no falle cuando más lo necesitas."
     }
   ];
 
-  const pillarsHtml = pillars.map(p => `
-    <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm">
-      <h3 class="font-heading font-bold text-lg text-[#0F172A] mb-2">
-        ${p.title}
-      </h3>
-      <p class="text-sm text-slate-600 leading-relaxed">
-        ${p.desc}
-      </p>
+  const rowsHtml = principles.map(p => `
+    <div class="py-7 first:pt-0 last:pb-0 border-b last:border-b-0 border-slate-200 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+      <span class="font-heading font-extrabold text-2xl text-[#1E3A5F] shrink-0">
+        ${p.num}.
+      </span>
+      <div>
+        <h3 class="font-heading font-bold text-lg sm:text-xl text-[#0F172A] mb-2">
+          ${p.title}
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          ${p.desc}
+        </p>
+      </div>
     </div>
   `).join('');
 
   return `
-    <section id="enfoque" class="py-20 sm:py-24 bg-white border-b border-slate-200 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="enfoque" class="py-20 sm:py-28 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          <!-- Columna Izquierda: Respaldo de Marca e Identidad -->
-          <div class="lg:col-span-5 space-y-5">
-            <div class="inline-flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-[#0F172A] p-2 flex items-center justify-center">
-                <img src="/a-circuit.png" alt="Isotipo A Circuito" class="w-full h-full object-contain" />
-              </div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#1E3A5F]">
-                Respaldo &amp; Compromiso Técnico
-              </span>
-            </div>
+          <!-- Columna Izquierda: Historia, Identidad y Sello Humano -->
+          <div class="lg:col-span-5 space-y-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#1E3A5F]">
+              Nuestra forma de trabajar
+            </p>
 
             <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight leading-tight">
-              ¿Por qué confiar el proyecto de tu empresa a ApexDigital?
+              Tecnología bien hecha, con compromiso real.
             </h2>
 
             <p class="text-slate-600 text-base leading-relaxed">
-              Sabemos que para un gerente o dueño de empresa lo más importante es la <strong class="text-[#0F172A] font-semibold">confianza, el cumplimiento de los plazos y que el sistema funcione sin dar problemas</strong>.
+              Sabemos que encargar una página web o un software suele generar desconfianza: proyectos que quedan a medias, plazos que no se cumplen o soporte que desaparece.
             </p>
 
-            <p class="text-slate-600 text-sm leading-relaxed">
-              Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas de todo Chile entregando soluciones tecnológicas sobrias, bien documentadas y con acompañamiento directo en cada etapa.
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas y emprendimientos de todo Chile bajo una regla simple: <strong class="text-[#0F172A] font-semibold">comprometer solo lo que podemos cumplir con excelencia</strong> y acompañar a nuestros clientes como su socio tecnológico de confianza.
             </p>
+
+            <!-- Placa Oficial Sobria -->
+            <div class="pt-2">
+              <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                <img 
+                  src="/brand-banner.jpg" 
+                  alt="ApexDigital — Soluciones Digitales" 
+                  class="w-full h-44 sm:h-48 object-cover object-center"
+                />
+              </div>
+            </div>
           </div>
 
-          <!-- Columna Derecha: 4 Tarjetas Limpias -->
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            ${pillarsHtml}
+          <!-- Columna Derecha: Diseño Editorial en Filas (Rompe con las cajitas repetitivas de IA) -->
+          <div class="lg:col-span-7 lg:pl-6 lg:border-l lg:border-slate-200">
+            ${rowsHtml}
           </div>
 
         </div>
