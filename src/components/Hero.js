@@ -1,68 +1,122 @@
 import { config } from '../config.js';
 
 export function Hero() {
-  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me gustaría conversar sobre un proyecto web, software o aplicación móvil para mi empresa.')}`;
+  const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me gustaría evaluar el desarrollo de un proyecto de software, web o aplicación móvil para mi empresa.')}`;
 
   return `
-    <section id="inicio" class="py-16 sm:py-24 lg:py-28 bg-white border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl">
-          <!-- Etiqueta Sobria -->
-          <p class="text-xs font-semibold uppercase tracking-widest text-sky-700 mb-4">
-            Software, Páginas Web y Apps Móviles · ${config.brand.location}
-          </p>
+    <section id="inicio" class="relative bg-executive-steel text-white py-20 sm:py-24 lg:py-28 border-b border-slate-800 overflow-hidden">
+      <!-- Marca de agua arquitectónica muy sutil con la 'A' de circuitos oficial -->
+      <img 
+        src="/a-circuit.png" 
+        alt="" 
+        aria-hidden="true"
+        class="pointer-events-none select-none absolute -right-20 -bottom-24 w-[480px] h-[480px] object-contain opacity-[0.04]"
+      />
 
-          <!-- Título Principal -->
-          <h1 class="font-heading font-bold text-3xl sm:text-5xl text-slate-900 tracking-tight leading-[1.15]">
-            Desarrollo de Software, Páginas Web y Apps Móviles a Medida para Empresas.
-          </h1>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+          
+          <!-- Columna Izquierda: Propuesta de Valor Ejecutiva -->
+          <div class="lg:col-span-7 space-y-7">
+            
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-white/[0.06] border border-white/15 text-slate-200 text-xs font-semibold tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+              <span>Ingeniería de Software · Páginas Web · Apps Móviles</span>
+            </div>
 
-          <!-- Subtítulo -->
-          <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-            Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables. Creamos sitios web, sistemas de gestión y aplicaciones para celular que funcionan 100% sincronizados en tiempo real.
-          </p>
+            <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] text-white tracking-tight leading-[1.14]">
+              Desarrollo de Software, Páginas Web y Apps a Medida para Empresas.
+            </h1>
 
-          <!-- Botones de Acción Simples y Directos -->
-          <div class="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
-            <a 
-              href="${whatsappUrl}" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-base font-semibold text-white bg-sky-600 hover:bg-sky-700 transition-colors"
-            >
-              <span>Conversar por WhatsApp</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
+            <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl font-normal">
+              Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables. Construimos páginas corporativas, sistemas de gestión e integramos aplicaciones móviles sincronizadas en tiempo real.
+            </p>
 
-            <a 
-              href="#servicios" 
-              class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
-            >
-              <span>Ver Soluciones</span>
-            </a>
+            <!-- Botones de Acción -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a 
+                href="${whatsappUrl}" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-lg text-base font-semibold text-[#0F172A] bg-white hover:bg-slate-100 shadow-lg transition-all"
+              >
+                <span>Conversar con Ingeniería</span>
+                <svg class="w-4 h-4 text-[#1E3A5F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+
+              <a 
+                href="#servicios" 
+                class="inline-flex items-center justify-center px-7 py-4 rounded-lg text-base font-semibold text-white bg-white/[0.07] hover:bg-white/[0.12] border border-white/20 transition-all"
+              >
+                <span>Ver Soluciones</span>
+              </a>
+            </div>
+
+            <!-- Pilares Rápidos en Portada -->
+            <div class="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+              <div>
+                <p class="font-heading font-bold text-white">Ecosistema Web + App</p>
+                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Tu página web y tu app móvil conectadas a una sola base de datos en vivo.</p>
+              </div>
+              <div>
+                <p class="font-heading font-bold text-white">Atención Sin Intermediarios</p>
+                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Trato directo con el equipo de ingeniería desde Puerto Montt a todo Chile.</p>
+              </div>
+              <div>
+                <p class="font-heading font-bold text-white">100% Propiedad del Cliente</p>
+                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Entrega completa de accesos, código fuente y dominio corporativo.</p>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Resumen claro y humano de cómo trabajamos -->
-          <div class="mt-14 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-            <div>
-              <p class="font-semibold text-slate-900">Web + App Sincronizadas</p>
-              <p class="text-slate-500 mt-1">Conectamos tu página web y tu aplicación móvil a una misma base de datos en tiempo real.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900">Trato directo y cercano</p>
-              <p class="text-slate-500 mt-1">Hablas directamente con el ingeniero a cargo de tu proyecto, sin intermediarios.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900">Propiedad total</p>
-              <p class="text-slate-500 mt-1">Entregamos el sistema funcionando junto con todos tus accesos y dominio propio.</p>
+          <!-- Columna Derecha: Presentación de Marca Oficial y Ficha Ejecutiva -->
+          <div class="lg:col-span-5">
+            <div class="bg-[#0F172A] border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
+              
+              <!-- Placa Metálica Oficial ApexDigital (Imagen proporcionada por el cliente) -->
+              <div class="relative bg-[#1E293B] border-b border-slate-700/80">
+                <img 
+                  src="/brand-banner.jpg" 
+                  alt="ApexDigital — Soluciones Digitales" 
+                  class="w-full h-52 sm:h-60 object-cover object-center"
+                />
+              </div>
+
+              <!-- Resumen de Capacidades Corporativas -->
+              <div class="p-6 sm:p-7 space-y-4 bg-[#0F172A]">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Capacidades de Ingeniería</span>
+                  <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded">Operación Activa</span>
+                </div>
+
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                  <li class="flex items-center justify-between">
+                    <span class="text-slate-400">Sitios Web Corporativos &amp; SEO</span>
+                    <span class="font-semibold text-white">Alta Velocidad</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-slate-400">Sistemas de Gestión &amp; Bases de Datos</span>
+                    <span class="font-semibold text-white">100% a Medida</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-slate-400">Aplicaciones Móviles (Android / iOS)</span>
+                    <span class="font-semibold text-white">Sincronizadas con Web</span>
+                  </li>
+                </ul>
+
+                <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                  <span>Contacto directo: <strong class="text-slate-200">${config.contact.whatsappDisplay}</strong></span>
+                  <span>${config.brand.location}</span>
+                </div>
+              </div>
+
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   `;

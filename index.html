@@ -3,41 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ApexDigital | Desarrollo de Software y Páginas Web para Empresas</title>
+  <title>ApexDigital | Ingeniería de Software, Páginas Web y Apps Móviles para Empresas</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Desarrollo de software y páginas web a medida para empresas en Chile. Soluciones digitales rápidas, seguras y escalables desde Puerto Montt.">
-  <meta name="keywords" content="desarrollo de software chile, paginas web empresas, sistemas web a medida, ingenieria informatica, apexdigital, puerto montt">
+  <meta name="description" content="Firma de desarrollo de software a medida, páginas web corporativas y aplicaciones móviles (Web + App sincronizadas) para empresas en Chile. Puerto Montt, Chile.">
+  <meta name="keywords" content="desarrollo de software chile, paginas web empresas, apps moviles chile, sistemas web a medida, ingenieria informatica, apexdigital, puerto montt">
   <meta name="author" content="ApexDigital">
   
-  <!-- Open Graph -->
+  <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apexdigital.cl/">
-  <meta property="og:title" content="ApexDigital | Desarrollo de Software y Páginas Web para Empresas">
-  <meta property="og:description" content="Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables para potenciar negocios en Chile.">
-  <meta property="og:image" content="/logo-circle.jpg">
+  <meta property="og:title" content="ApexDigital | Soluciones Digitales e Ingeniería de Software">
+  <meta property="og:description" content="Transformamos requerimientos complejos en plataformas web, sistemas de gestión y aplicaciones móviles sincronizadas para potenciar empresas en Chile.">
+  <meta property="og:image" content="/brand-banner.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon-ad.png?v=3">
-  <link rel="apple-touch-icon" href="/favicon-ad.png?v=3">
+  <!-- Favicon Oficial AD Metálico -->
+  <link rel="icon" type="image/png" href="/favicon-ad.png?v=4">
+  <link rel="apple-touch-icon" href="/favicon-ad.png?v=4">
 
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS configurado con la paleta Acero, Plata y Azul Marino Imperial del Logo -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              dark: '#0F172A',
-              blue: '#0284C7',
-              blueHover: '#0369A1',
-              light: '#F8FAFC'
+            apex: {
+              navy: '#0F172A',      /* Azul marino profundo corporativo */
+              imperial: '#1E3A5F',  /* Azul acero imperial del interior del logo AD */
+              steel: '#334155',     /* Gris acero oscuro */
+              silver: '#94A3B8',    /* Plata metálico */
+              platinum: '#F1F5F9',  /* Fondo platino claro */
+              surface: '#F8FAFC'    /* Blanco humo */
             }
           },
           fontFamily: {
@@ -51,7 +53,7 @@
 
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900">
+<body class="bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-[#1E3A5F] selection:text-white overflow-x-hidden">
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>

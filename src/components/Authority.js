@@ -1,59 +1,69 @@
 import { config } from '../config.js';
 
 export function Authority() {
-  const reasons = [
+  const pillars = [
     {
-      title: "Enfoque de ingeniería informática real",
-      desc: "No hacemos parches ni usamos plantillas pesadas que fallan al mes. Estructuramos cada proyecto con criterio técnico para que funcione de manera estable a largo plazo."
+      title: "Ingeniería informática real, sin plantillas genéricas",
+      desc: "Construimos software bien estructurado desde la base. Eso se traduce en plataformas estables que no se caen ni quedan obsoletas a los pocos meses."
     },
     {
-      title: "Código limpio y sitios rápidos",
-      desc: "Cuidamos el rendimiento (Core Web Vitals) para que tu página cargue rápido tanto en computadores de oficina como en celulares, mejorando tu presencia en Google."
+      title: "Velocidad y rendimiento (Core Web Vitals)",
+      desc: "Optimizamos cada detalle para que tu sitio web o sistema cargue de forma instantánea en celulares y computadores, mejorando tu posicionamiento en Google."
     },
     {
-      title: "Comunicación directa sin intermediarios",
-      desc: "Tratas directamente con quien diseña y programa tu sistema. Explicamos cada paso en un lenguaje claro, sin tecnicismos innecesarios y cumpliendo los plazos acordados."
+      title: "Trato humano y directo sin intermediarios",
+      desc: "Te comunicas directamente con el ingeniero responsable de tu proyecto. Sin vendedores que prometen cosas irreales ni burocracia innecesaria."
     },
     {
-      title: "Transparencia y acompañamiento",
-      desc: "Te asesoramos honestamente sobre qué tecnología conviene más para el tamaño actual de tu empresa, evitando gastos innecesarios."
+      title: "Seguridad y propiedad total de tu plataforma",
+      desc: "Aplicamos protocolos modernos de seguridad y al finalizar te entregamos el control total de tu dominio, tus accesos y tu sistema."
     }
   ];
 
-  const reasonsHtml = reasons.map(r => `
-    <div class="clean-card p-6 sm:p-7">
-      <h3 class="font-heading font-bold text-base sm:text-lg text-slate-900 mb-2">
-        ${r.title}
+  const pillarsHtml = pillars.map(p => `
+    <div class="bg-white border border-slate-200 rounded-xl p-7 shadow-sm">
+      <h3 class="font-heading font-bold text-lg text-[#0F172A] mb-2">
+        ${p.title}
       </h3>
       <p class="text-sm text-slate-600 leading-relaxed">
-        ${r.desc}
+        ${p.desc}
       </p>
     </div>
   `).join('');
 
   return `
-    <section id="enfoque" class="py-20 sm:py-24 bg-white border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="enfoque" class="py-20 sm:py-24 bg-white border-b border-slate-200 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div class="lg:col-span-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-sky-700 mb-2">
-              Sobre nuestro trabajo
-            </p>
-            <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight leading-snug">
-              ¿Por qué trabajar con ApexDigital?
+          <!-- Columna Izquierda: Respaldo de Marca e Identidad -->
+          <div class="lg:col-span-5 space-y-5">
+            <div class="inline-flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#0F172A] p-2 flex items-center justify-center">
+                <img src="/a-circuit.png" alt="Isotipo A Circuito" class="w-full h-full object-contain" />
+              </div>
+              <span class="text-xs font-bold uppercase tracking-widest text-[#1E3A5F]">
+                Respaldo &amp; Compromiso Técnico
+              </span>
+            </div>
+
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight leading-tight">
+              ¿Por qué confiar el proyecto de tu empresa a ApexDigital?
             </h2>
-            <p class="mt-4 text-slate-600 text-base leading-relaxed">
-              En <strong class="text-slate-900 font-semibold">${config.brand.name}</strong> creemos que la tecnología debe simplificar el trabajo de las empresas, no complicarlo.
+
+            <p class="text-slate-600 text-base leading-relaxed">
+              Sabemos que para un gerente o dueño de empresa lo más importante es la <strong class="text-[#0F172A] font-semibold">confianza, el cumplimiento de los plazos y que el sistema funcione sin dar problemas</strong>.
             </p>
-            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
-              Desde <strong class="text-slate-800 font-medium">${config.brand.location}</strong> apoyamos a pymes, profesionales y empresas de todo Chile que buscan un socio tecnológico responsable, cercano y comprometido con entregar un buen resultado.
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas de todo Chile entregando soluciones tecnológicas sobrias, bien documentadas y con acompañamiento directo en cada etapa.
             </p>
           </div>
 
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            ${reasonsHtml}
+          <!-- Columna Derecha: 4 Tarjetas Limpias -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            ${pillarsHtml}
           </div>
 
         </div>

@@ -1,28 +1,69 @@
 /* ==========================================================================
-   ApexDigital — Diseño Corporativo Limpio, Humano y Sobrio (Fondo Blanco)
+   ApexDigital — Identidad Corporativa: Acero Cepillado, Plata y Azul Marino
+   Sobrio, prolijo y ejecutivo. Cero luces neón ni efectos artificiales de IA.
    ========================================================================== */
 
 html {
   scroll-behavior: smooth;
-  background-color: #FFFFFF;
+  background-color: #F8FAFC;
 }
 
 body {
-  background-color: #FFFFFF;
-  color: #1E293B;
+  background-color: #F8FAFC;
+  color: #0F172A;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tarjeta básica, limpia y profesional sobre fondo claro */
-.clean-card {
+/* Textura metálica oscura inspirada en el banner oficial (Acero / Azul Marino) */
+.bg-executive-steel {
+  background: linear-gradient(135deg, #0B1120 0%, #162238 55%, #1E293B 100%);
+}
+
+/* Banda superior de acento acero-azul en las tarjetas */
+.executive-card {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.clean-card:hover {
-  border-color: #CBD5E1;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+.executive-card:hover {
+  transform: translateY(-3px);
+  border-color: #94A3B8;
+  box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.1);
+}
+
+/* Botón corporativo Azul Marino Imperial / Acero */
+.btn-apex-primary {
+  background: linear-gradient(180deg, #1E3A5F 0%, #0F172A 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+  transition: all 0.2s ease;
+}
+
+.btn-apex-primary:hover {
+  background: linear-gradient(180deg, #254773 0%, #162238 100%);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Botón Flotante de WhatsApp Vistoso y Ejecutivo */
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px -4px rgba(22, 163, 74, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 14px 30px -4px rgba(22, 163, 74, 0.55), 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float-btn {
+  animation: subtle-pulse 3s infinite ease-in-out;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.whatsapp-float-btn:hover {
+  transform: translateY(-2px) scale(1.02);
 }
