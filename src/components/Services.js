@@ -104,42 +104,9 @@ export function Services() {
           </p>
         </div>
 
-        <!-- Grilla 2x2 de Catálogo Limpio (Sin botones repetitivos en cada tarjeta) -->
+        <!-- Grilla 2x2 de Catálogo Limpio -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           ${cardsHtml}
-        </div>
-
-        <!-- Bloque de Valor Agregado Opcional: Sincronización Web + App -->
-        <div id="sincronizacion" class="mt-14 bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 shadow-sm">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div class="lg:col-span-8 space-y-3">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#1E3A5F]/10 text-[#1E3A5F] text-xs font-bold uppercase tracking-wider">
-                <span>Valor Agregado Opcional</span>
-              </div>
-              <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A]">
-                ¿Necesitas una App independiente o conectada con tu Web? Hacemos ambas.
-              </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Podemos desarrollar tu aplicación móvil como un proyecto autónomo para celulares, o bien añadir la integración con tu plataforma web para que ambos sistemas funcionen sincronizados en tiempo real sobre una misma base de datos.
-              </p>
-            </div>
-
-            <div class="lg:col-span-4 flex lg:justify-end">
-              <a 
-                href="${whatsappUrl}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-apex-primary inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 py-3.5 rounded-lg text-sm font-semibold"
-              >
-                <span>Consultar por un Proyecto</span>
-                <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
         </div>
 
       </div>

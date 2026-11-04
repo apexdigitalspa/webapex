@@ -52,10 +52,7 @@ export function Navbar() {
           <!-- Enlaces Desktop -->
           <nav class="hidden md:flex items-center gap-9" aria-label="Navegación Principal">
             <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
-              Servicios
-            </a>
-            <a href="#sincronizacion" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
-              Web + App Móvil
+              Catálogo de Soluciones
             </a>
             <a href="#enfoque" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
               Enfoque Técnico
@@ -103,10 +100,7 @@ export function Navbar() {
       <!-- Menú Móvil Desplegable -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl">
         <a href="#servicios" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
-          Servicios
-        </a>
-        <a href="#sincronizacion" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
-          Web + App Móvil
+          Catálogo de Soluciones
         </a>
         <a href="#enfoque" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
           Enfoque Técnico

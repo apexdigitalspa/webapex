@@ -82,9 +82,9 @@ export function Footer() {
             <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navegación</h4>
             <ul class="space-y-2 text-sm">
               <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Servicios Modulares</a></li>
-              <li><a href="#sincronizacion" class="hover:text-white transition-colors">Sincronización Web + App</a></li>
+              <li><a href="#servicios" class="hover:text-white transition-colors">Catálogo de Soluciones</a></li>
               <li><a href="#enfoque" class="hover:text-white transition-colors">Enfoque Técnico</a></li>
+              <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
             </ul>
           </div>
 
