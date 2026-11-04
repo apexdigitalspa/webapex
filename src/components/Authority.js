@@ -8,15 +8,15 @@ export function Authority() {
     },
     {
       title: "Velocidad y rendimiento (Core Web Vitals)",
-      desc: "Optimizamos cada detalle para que tu sitio web o sistema cargue de forma instantánea en celulares y computadores, mejorando tu posicionamiento en Google."
+      desc: "Optimizamos cada detalle para que tu sitio web, sistema o aplicación cargue de forma rápida en celulares y computadores, mejorando tu presencia en Google."
     },
     {
       title: "Trato humano y directo sin intermediarios",
       desc: "Te comunicas directamente con el ingeniero responsable de tu proyecto. Sin vendedores que prometen cosas irreales ni burocracia innecesaria."
     },
     {
-      title: "Seguridad y propiedad total de tu plataforma",
-      desc: "Aplicamos protocolos modernos de seguridad y al finalizar te entregamos el control total de tu dominio, tus accesos y tu sistema."
+      title: "Arquitectura segura y escalable",
+      desc: "Aplicamos buenas prácticas de seguridad y diseñamos sistemas modulares que pueden crecer e incorporar nuevas funciones conforme tu empresa evoluciona."
     }
   ];
 

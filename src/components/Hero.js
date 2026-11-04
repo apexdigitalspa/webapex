@@ -25,11 +25,11 @@ export function Hero() {
             </div>
 
             <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] text-white tracking-tight leading-[1.14]">
-              Desarrollo de Software, Páginas Web y Apps a Medida para Empresas.
+              Desarrollo de Software, Páginas Web y Apps Móviles a Medida.
             </h1>
 
             <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl font-normal">
-              Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables. Construimos páginas corporativas, sistemas de gestión e integramos aplicaciones móviles sincronizadas en tiempo real.
+              Transformamos requerimientos complejos en plataformas digitales rápidas, seguras y escalables. Desarrollamos páginas web corporativas, aplicaciones móviles independientes (Android / iOS) y sistemas de gestión adaptados a tu empresa.
             </p>
 
             <!-- Botones de Acción -->
@@ -50,23 +50,23 @@ export function Hero() {
                 href="#servicios" 
                 class="inline-flex items-center justify-center px-7 py-4 rounded-lg text-base font-semibold text-white bg-white/[0.07] hover:bg-white/[0.12] border border-white/20 transition-all"
               >
-                <span>Ver Soluciones</span>
+                <span>Ver Catálogo de Soluciones</span>
               </a>
             </div>
 
             <!-- Pilares Rápidos en Portada -->
             <div class="pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
               <div>
-                <p class="font-heading font-bold text-white">Ecosistema Web + App</p>
-                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Tu página web y tu app móvil conectadas a una sola base de datos en vivo.</p>
+                <p class="font-heading font-bold text-white">Desarrollo a Medida</p>
+                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Proyectos diseñados según la lógica, etapa y objetivos de tu negocio.</p>
               </div>
               <div>
                 <p class="font-heading font-bold text-white">Atención Sin Intermediarios</p>
                 <p class="text-slate-400 text-xs mt-1 leading-relaxed">Trato directo con el equipo de ingeniería desde Puerto Montt a todo Chile.</p>
               </div>
               <div>
-                <p class="font-heading font-bold text-white">100% Propiedad del Cliente</p>
-                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Entrega completa de accesos, código fuente y dominio corporativo.</p>
+                <p class="font-heading font-bold text-white">Escalabilidad Técnica</p>
+                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Plataformas preparadas para crecer e integrarse con nuevos módulos a futuro.</p>
               </div>
             </div>
 
@@ -76,7 +76,7 @@ export function Hero() {
           <div class="lg:col-span-5">
             <div class="bg-[#0F172A] border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
               
-              <!-- Placa Metálica Oficial ApexDigital (Imagen proporcionada por el cliente) -->
+              <!-- Placa Metálica Oficial ApexDigital -->
               <div class="relative bg-[#1E293B] border-b border-slate-700/80">
                 <img 
                   src="/brand-banner.jpg" 
@@ -99,16 +99,16 @@ export function Hero() {
                   </li>
                   <li class="flex items-center justify-between">
                     <span class="text-slate-400">Sistemas de Gestión &amp; Bases de Datos</span>
-                    <span class="font-semibold text-white">100% a Medida</span>
+                    <span class="font-semibold text-white">Arquitectura Sólida</span>
                   </li>
                   <li class="flex items-center justify-between">
                     <span class="text-slate-400">Aplicaciones Móviles (Android / iOS)</span>
-                    <span class="font-semibold text-white">Sincronizadas con Web</span>
+                    <span class="font-semibold text-white">Nativas o Integradas</span>
                   </li>
                 </ul>
 
                 <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                  <span>Contacto directo: <strong class="text-slate-200">${config.contact.whatsappDisplay}</strong></span>
+                  <span>Correo: <strong class="text-slate-200">${config.contact.email}</strong></span>
                   <span>${config.brand.location}</span>
                 </div>
               </div>
