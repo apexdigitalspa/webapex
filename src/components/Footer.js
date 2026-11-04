@@ -50,9 +50,11 @@ export function Footer() {
                   Ideal para consultas rápidas, contarnos tu idea o coordinar una llamada.
                 </p>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-semibold text-[#0F172A] group-hover:text-emerald-600 transition-colors">
-                <span>${config.contact.whatsappDisplay}</span>
-                <span>Escribir &rarr;</span>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-1.5">
+                <span class="text-sm font-bold text-[#0F172A]">${config.contact.whatsappDisplay}</span>
+                <span class="text-xs font-semibold text-emerald-600 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Abrir conversación en WhatsApp &rarr;
+                </span>
               </div>
             </a>
 
@@ -73,9 +75,11 @@ export function Footer() {
                   Envíanos documentos, detalles técnicos o solicitudes de presupuesto formal.
                 </p>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-semibold text-[#0F172A] group-hover:text-[#1E3A5F] transition-colors">
-                <span>${config.contact.email}</span>
-                <span>Enviar correo &rarr;</span>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-1.5">
+                <span class="text-sm font-bold text-[#0F172A] break-all">${config.contact.email}</span>
+                <span class="text-xs font-semibold text-[#1E3A5F] inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Enviar correo electrónico &rarr;
+                </span>
               </div>
             </a>
 
