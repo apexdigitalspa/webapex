@@ -13,24 +13,6 @@ export function Navbar() {
 
   return `
     <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_1px_3px_rgba(15,23,42,0.03)]">
-      <!-- Cintillo Superior Corporativo (Acero / Azul Marino Profundo) -->
-      <div class="hidden lg:block bg-[#0F172A] text-slate-300 text-xs border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-9 flex items-center justify-between">
-          <div class="flex items-center gap-6">
-            <span class="font-medium text-white tracking-wide">APEXDIGITAL · SOLUCIONES DIGITALES E INGENIERÍA DE SOFTWARE</span>
-            <span class="text-slate-600">|</span>
-            <span class="text-slate-400">Ubicación: <strong class="text-slate-200 font-medium">${config.brand.location}</strong></span>
-          </div>
-          <div class="flex items-center gap-6">
-            <a href="mailto:${config.contact.email}" class="hover:text-white transition-colors">${config.contact.email}</a>
-            <span class="text-slate-600">|</span>
-            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-white font-medium transition-colors">
-              WhatsApp Directo: ${config.contact.whatsappDisplay}
-            </a>
-          </div>
-        </div>
-      </div>
-
       <!-- Barra Principal -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
