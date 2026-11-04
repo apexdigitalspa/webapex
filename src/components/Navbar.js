@@ -50,12 +50,9 @@ export function Navbar() {
               href="${whatsappUrl}" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="btn-apex-primary inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg text-sm font-semibold"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[#0F172A] hover:bg-[#1E3A5F] transition-colors shadow-sm"
             >
-              <span>Cotizar Proyecto</span>
-              <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
+              <span>Contáctanos</span>
             </a>
           </div>
 

@@ -58,17 +58,6 @@ export function Authority() {
             <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
               Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas y emprendimientos de todo Chile bajo una regla simple: <strong class="text-[#0F172A] font-semibold">comprometer solo lo que podemos cumplir con excelencia</strong> y acompañar a nuestros clientes como su socio tecnológico de confianza.
             </p>
-
-            <!-- Placa Oficial Sobria -->
-            <div class="pt-2">
-              <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm">
-                <img 
-                  src="/brand-banner.jpg" 
-                  alt="ApexDigital — Soluciones Digitales" 
-                  class="w-full h-44 sm:h-48 object-cover object-center"
-                />
-              </div>
-            </div>
           </div>
 
           <!-- Columna Derecha: Diseño Editorial en Filas (Rompe con las cajitas repetitivas de IA) -->
