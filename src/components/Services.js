@@ -3,7 +3,7 @@ export function Services() {
     {
       category: "Páginas Web de Empresa",
       title: "Sitios Web Corporativos y Páginas de Ventas",
-      description: "Si un potencial cliente busca tu empresa en internet, lo que ve define si te pide una cotización o pasa de largo. Diseñamos sitios sobrios, rápidos y claros que explican bien tu servicio y facilitan el contacto directo.",
+      description: "Tu sitio web es la primera impresión comercial de tu empresa. Desarrollamos páginas corporativas sobrias, rápidas y bien estructuradas que proyectan respaldo profesional, presentan tus servicios con claridad y convierten visitas en oportunidades reales de negocio.",
       examples: "Ejemplos habituales: sitios para empresas de servicios, constructoras, clínicas, consultoras, estudios profesionales y comercio local."
     },
     {
