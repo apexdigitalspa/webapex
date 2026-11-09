@@ -10,9 +10,9 @@ export function Hero() {
         <!-- Composición Arquitectónica Asimétrica (7 columnas + 5 columnas) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
-          <!-- Columna Principal: Propuesta de Valor y Acción (7 cols) -->
-          <div class="lg:col-span-7">
-            <h1 class="hero-stagger-1 font-heading font-extrabold text-3xl sm:text-5xl lg:text-[3.15rem] text-white tracking-tight leading-[1.13]">
+          <!-- Columna Principal: Propuesta de Valor y Acción (6 cols en lg para dar espacio amplio al showcase visual) -->
+          <div class="lg:col-span-6">
+            <h1 class="hero-stagger-1 font-heading font-extrabold text-3xl sm:text-5xl lg:text-[3rem] text-white tracking-tight leading-[1.13]">
               Ingeniería de software, páginas web y aplicaciones móviles para empresas en Chile.
             </h1>
 
@@ -48,59 +48,147 @@ export function Hero() {
             </p>
           </div>
 
-          <!-- Columna Derecha: Ficha Arquitectónica de Capacidades (5 cols, sin duplicar el logo AD) -->
-          <div class="lg:col-span-5 hero-stagger-4">
-            <div class="rounded-xl bg-[#0F172A] border border-slate-700/90 shadow-2xl overflow-hidden">
+          <!-- Columna Derecha: Composición Visual Multi-Dispositivo (2 Webs Empresas del Sur + Celular en línea) -->
+          <div class="lg:col-span-6 hero-stagger-4">
+            <div class="relative mx-auto max-w-[560px] lg:max-w-none h-[390px] sm:h-[450px] select-none" aria-label="Muestra visual de sitios web corporativos y asistente móvil desarrollados por ApexDigital">
               
-              <!-- Cabecera de la Ficha limpia -->
-              <div class="px-6 py-5 bg-[#131F36] border-b border-slate-700/90">
-                <h2 class="font-heading font-bold text-base sm:text-lg text-white leading-snug">
-                  Áreas de Desarrollo y Alcance
-                </h2>
-                <p class="text-xs text-slate-300 mt-0.5">
-                  Soluciones programadas a medida · Cobertura nacional
-                </p>
+              <!-- 1. VENTANA WEB PRINCIPAL (Fondo Arriba/Centro: Empresa Submarina ROV) -->
+              <div class="absolute top-0 left-[6%] sm:left-[10%] right-[4%] sm:right-[6%] rounded-xl overflow-hidden shadow-2xl border border-slate-700/80 bg-white">
+                <!-- Barra de navegador macOS -->
+                <div class="bg-[#E2E8F0] px-3.5 py-2 flex items-center gap-3 border-b border-slate-300">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                  </div>
+                  <span class="text-[11px] font-medium text-slate-600 tracking-tight">verticalrov.cl</span>
+                </div>
+
+                <!-- Topbar oscura del sitio ROV -->
+                <div class="bg-[#090D16] text-slate-300 px-4 py-1 flex items-center justify-between text-[8px] sm:text-[9px]">
+                  <span>+56 9 4662 5167 &nbsp;|&nbsp; contacto@verticalrov.cl</span>
+                  <span class="hidden sm:inline text-white font-medium">Escríbenos por WhatsApp</span>
+                </div>
+
+                <!-- Navbar blanca del sitio ROV -->
+                <div class="bg-white px-4 py-2.5 flex items-center justify-between border-b border-slate-100">
+                  <div class="flex items-center gap-1">
+                    <span class="bg-[#0F172A] text-white font-heading font-extrabold text-[9px] sm:text-[10px] px-1.5 py-0.5 tracking-wider">VERTICAL</span>
+                    <span class="text-[#0F172A] font-heading font-bold text-[9px] sm:text-[10px] border border-slate-800 px-1.5 py-0.5 tracking-wider">ROV</span>
+                  </div>
+                  <div class="hidden sm:flex items-center gap-3 text-[8px] font-bold text-slate-700 tracking-wider">
+                    <span>INICIO</span>
+                    <span>NOSOTROS</span>
+                    <span>SERVICIOS</span>
+                    <span>EQUIPOS</span>
+                    <span>CLIENTES</span>
+                  </div>
+                  <span class="bg-[#1E3A8A] text-white text-[8px] font-bold px-2.5 py-1 rounded-sm tracking-wider">COTIZAR</span>
+                </div>
+
+                <!-- Hero submarino del sitio ROV -->
+                <div class="relative px-5 sm:px-7 py-6 sm:py-8 bg-gradient-to-br from-[#0F293A] via-[#134E4A] to-[#0A1E2E] text-white overflow-hidden min-h-[215px] sm:min-h-[250px]">
+                  <!-- Efecto de luz submarina sutil -->
+                  <div class="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_70%_20%,#38BDF8,transparent_60%)]"></div>
+                  <div class="relative z-10 max-w-[72%]">
+                    <p class="font-heading font-extrabold text-base sm:text-xl leading-[1.15] tracking-tight text-white">
+                      Inspecciones y Trabajos Submarinos con ROV
+                    </p>
+                    <div class="w-24 h-0.5 bg-white/80 my-2.5"></div>
+                    <p class="text-[10px] sm:text-xs italic font-semibold text-slate-100">
+                      Remotely Operated Vehicle
+                    </p>
+                    <p class="mt-1.5 text-[8.5px] sm:text-[10px] text-slate-200 leading-relaxed">
+                      Operaciones submarinas profesionales para acuicultura, minería y obras marítimas con registro en video e informe técnico.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <!-- Filas de Especificación Técnica -->
-              <div class="divide-y divide-slate-800 text-sm">
-                <div class="px-6 py-4 flex items-start justify-between gap-4">
-                  <div>
-                    <p class="font-semibold text-white">Sitios Corporativos &amp; Ventas</p>
-                    <p class="text-xs text-slate-300 mt-0.5">Presencia comercial, SEO en Google y contacto directo</p>
-                  </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Web &amp; SEO</span>
+              <!-- 2. VENTANA WEB SECUNDARIA (Abajo Izquierda: Seguridad Los Lagos) -->
+              <div class="absolute bottom-2 left-0 w-[60%] sm:w-[56%] rounded-xl overflow-hidden shadow-2xl border border-slate-700 bg-[#0F172A] z-20">
+                <!-- Barra de navegador macOS -->
+                <div class="bg-[#E2E8F0] px-3 py-1.5 flex items-center gap-1.5 border-b border-slate-300">
+                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
                 </div>
 
-                <div class="px-6 py-4 flex items-start justify-between gap-4">
-                  <div>
-                    <p class="font-semibold text-white">Sistemas de Gestión e Intranets</p>
-                    <p class="text-xs text-slate-300 mt-0.5">Bodega, inventario, clientes, órdenes y reportes PDF</p>
+                <!-- Navbar interna Seguridad Los Lagos -->
+                <div class="bg-[#0B1120] px-3 py-2 flex items-center justify-between border-b border-slate-800">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#2563EB] inline-flex items-center justify-center text-[7px] font-bold text-white">S</span>
+                    <span class="text-[8px] font-bold text-white tracking-tight">Seguridad <span class="text-[#60A5FA]">Los Lagos</span></span>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Software</span>
+                  <div class="flex items-center gap-1">
+                    <span class="bg-[#16A34A] text-white text-[6.5px] font-semibold px-1.5 py-0.5 rounded">WhatsApp</span>
+                    <span class="bg-[#2563EB] text-white text-[6.5px] font-semibold px-1.5 py-0.5 rounded hidden sm:inline">Solicitar cotización</span>
+                  </div>
                 </div>
 
-                <div class="px-6 py-4 flex items-start justify-between gap-4">
-                  <div>
-                    <p class="font-semibold text-white">Apps Móviles Android &amp; iOS</p>
-                    <p class="text-xs text-slate-300 mt-0.5">100% independientes o sincronizadas con tu sitio web</p>
+                <!-- Hero Seguridad Los Lagos -->
+                <div class="relative p-3.5 sm:p-4 bg-gradient-to-br from-[#0B132B] via-[#1E293B] to-[#0F172A] text-white">
+                  <span class="inline-block px-2 py-0.5 rounded-full bg-[#1E3A8A]/80 border border-[#3B82F6]/40 text-[6.5px] text-slate-200 tracking-wider uppercase mb-1.5">
+                    Seguridad Privada · Región de los Lagos
+                  </span>
+                  <p class="font-heading font-extrabold text-xs sm:text-sm leading-tight text-white">
+                    Protegemos lo que más <span class="text-[#60A5FA]">importa para su empresa</span>
+                  </p>
+                  <p class="mt-1.5 text-[7.5px] sm:text-[8.5px] text-slate-300 leading-relaxed">
+                    Guardias de seguridad, supervisión 24/7, control de acceso y resguardo industrial en la Región de los Lagos.
+                  </p>
+                  <div class="mt-2.5 flex items-center gap-1.5">
+                    <span class="bg-[#2563EB] text-white text-[7px] font-semibold px-2 py-1 rounded">Solicitar cotización</span>
+                    <span class="border border-slate-600 text-slate-200 text-[7px] font-medium px-2 py-1 rounded">Contactar por WhatsApp</span>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Móvil</span>
-                </div>
-
-                <div class="px-6 py-4 flex items-start justify-between gap-4">
-                  <div>
-                    <p class="font-semibold text-white">Pagos y Reservas en Línea</p>
-                    <p class="text-xs text-slate-300 mt-0.5">Integración con Webpay Plus, Flow y agendas automáticas</p>
-                  </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Pagos 24/7</span>
                 </div>
               </div>
 
-              <!-- Pie de Ficha -->
-              <div class="px-6 py-3.5 bg-[#090E1A] border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
-                <span>Atención directa de ingeniería</span>
-                <span class="font-semibold text-white">${config.brand.location}</span>
+              <!-- 3. CELULAR CON ASISTENTE EN LÍNEA (Abajo Derecha) -->
+              <div class="absolute bottom-0 right-0 w-[44%] sm:w-[40%] max-w-[215px] rounded-[1.75rem] sm:rounded-[2rem] bg-[#090D16] p-2 sm:p-2.5 shadow-2xl border border-slate-700 z-30">
+                <!-- Notch superior del teléfono -->
+                <div class="w-14 sm:w-16 h-3 bg-[#090D16] rounded-b-xl mx-auto relative z-10 -mb-1.5"></div>
+                
+                <!-- Pantalla blanca del teléfono -->
+                <div class="bg-[#F8FAFC] rounded-[1.35rem] sm:rounded-[1.5rem] overflow-hidden text-slate-900">
+                  
+                  <!-- Cabecera del Asistente -->
+                  <div class="bg-white pt-4 pb-2.5 px-3 sm:px-3.5 border-b border-slate-200 flex items-center gap-2.5">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#2563EB] shrink-0 flex items-center justify-center text-white font-heading font-bold text-[10px]">
+                      AD
+                    </div>
+                    <div class="leading-tight">
+                      <p class="font-heading font-bold text-[10px] sm:text-[11px] text-slate-900">Asistente</p>
+                      <p class="font-heading font-bold text-[10px] sm:text-[11px] text-slate-900">ApexDigital</p>
+                      <p class="text-[8.5px] sm:text-[9px] font-semibold text-[#15803D] mt-0.5">En línea</p>
+                    </div>
+                  </div>
+
+                  <!-- Conversación de Chat -->
+                  <div class="p-2.5 sm:p-3 space-y-2 bg-[#F1F5F9]/70 min-h-[185px] sm:min-h-[215px] flex flex-col justify-center">
+                    <!-- Mensaje 1: Asistente -->
+                    <div class="bg-white border border-slate-200/80 rounded-xl rounded-tl-sm p-2 sm:p-2.5 shadow-sm max-w-[92%]">
+                      <p class="text-[8.5px] sm:text-[10px] text-slate-800 leading-snug">
+                        Hola 👋 ¿En qué podemos ayudarte?
+                      </p>
+                    </div>
+
+                    <!-- Mensaje 2: Cliente -->
+                    <div class="bg-[#DBEAFE] rounded-xl rounded-tr-sm p-2 sm:p-2.5 shadow-sm max-w-[92%] self-end">
+                      <p class="text-[8.5px] sm:text-[10px] text-[#1E3A8A] font-medium leading-snug">
+                        Necesito una página para mi empresa.
+                      </p>
+                    </div>
+
+                    <!-- Mensaje 3: Asistente -->
+                    <div class="bg-white border border-slate-200/80 rounded-xl rounded-tl-sm p-2 sm:p-2.5 shadow-sm max-w-[94%]">
+                      <p class="text-[8.5px] sm:text-[10px] text-slate-800 leading-snug">
+                        Podemos ayudarte con diseño web, sistemas, apps y automatización.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
             </div>
