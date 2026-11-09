@@ -48,146 +48,143 @@ export function Hero() {
             </p>
           </div>
 
-          <!-- Columna Derecha: Composición Visual Multi-Dispositivo (2 Webs Empresas del Sur + Celular en línea) -->
+          <!-- Columna Derecha: Composición Original ApexDigital (Web Corporativa + Sistema de Gestión + App Móvil) -->
           <div class="lg:col-span-6 hero-stagger-4">
-            <div class="relative mx-auto max-w-[560px] lg:max-w-none h-[390px] sm:h-[450px] select-none" aria-label="Muestra visual de sitios web corporativos y asistente móvil desarrollados por ApexDigital">
+            <div class="relative mx-auto max-w-[560px] lg:max-w-none h-[400px] sm:h-[460px] select-none" aria-label="Muestra de proyectos de ApexDigital: Sitio web corporativo, sistema de gestión de inventario y aplicación móvil">
               
-              <!-- 1. VENTANA WEB PRINCIPAL (Fondo Arriba/Centro: Empresa Submarina ROV) -->
-              <div class="absolute top-0 left-[6%] sm:left-[10%] right-[4%] sm:right-[6%] rounded-xl overflow-hidden shadow-2xl border border-slate-700/80 bg-white">
-                <!-- Barra de navegador macOS -->
-                <div class="bg-[#E2E8F0] px-3.5 py-2 flex items-center gap-3 border-b border-slate-300">
+              <!-- 1. VENTANA PRINCIPAL (Arriba Derecha: Web Corporativa de Logística & Maquinaria del Sur) -->
+              <div class="absolute top-0 right-0 left-[12%] sm:left-[15%] rounded-xl overflow-hidden shadow-2xl border border-slate-700/90 bg-[#0B1120] z-10">
+                <!-- Barra de navegador -->
+                <div class="bg-[#1E293B] px-3.5 py-2 flex items-center justify-between border-b border-slate-700">
                   <div class="flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
                   </div>
-                  <span class="text-[11px] font-medium text-slate-600 tracking-tight">verticalrov.cl</span>
+                  <div class="bg-[#0F172A] px-3 py-0.5 rounded text-[10px] font-medium text-slate-300 border border-slate-700/80">
+                    maquinariasur.cl
+                  </div>
+                  <span class="w-6"></span>
                 </div>
 
-                <!-- Topbar oscura del sitio ROV -->
-                <div class="bg-[#090D16] text-slate-300 px-4 py-1 flex items-center justify-between text-[8px] sm:text-[9px]">
-                  <span>+56 9 4662 5167 &nbsp;|&nbsp; contacto@verticalrov.cl</span>
-                  <span class="hidden sm:inline text-white font-medium">Escríbenos por WhatsApp</span>
+                <!-- Navbar interna del sitio web -->
+                <div class="bg-[#0F172A] px-4 py-2.5 flex items-center justify-between border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-4 bg-[#38BDF8] rounded-xs"></span>
+                    <span class="font-heading font-extrabold text-[10px] sm:text-[11px] text-white tracking-wider">MAQUINARIA<span class="text-[#38BDF8]">SUR</span></span>
+                  </div>
+                  <div class="hidden sm:flex items-center gap-3.5 text-[8.5px] font-semibold text-slate-300">
+                    <span>Flota</span>
+                    <span>Arriendo</span>
+                    <span>Proyectos</span>
+                    <span>Contacto</span>
+                  </div>
+                  <span class="bg-[#38BDF8] text-[#0B1120] text-[8px] font-bold px-2.5 py-1 rounded"> Reserva en Línea </span>
                 </div>
 
-                <!-- Navbar blanca del sitio ROV -->
-                <div class="bg-white px-4 py-2.5 flex items-center justify-between border-b border-slate-100">
-                  <div class="flex items-center gap-1">
-                    <span class="bg-[#0F172A] text-white font-heading font-extrabold text-[9px] sm:text-[10px] px-1.5 py-0.5 tracking-wider">VERTICAL</span>
-                    <span class="text-[#0F172A] font-heading font-bold text-[9px] sm:text-[10px] border border-slate-800 px-1.5 py-0.5 tracking-wider">ROV</span>
-                  </div>
-                  <div class="hidden sm:flex items-center gap-3 text-[8px] font-bold text-slate-700 tracking-wider">
-                    <span>INICIO</span>
-                    <span>NOSOTROS</span>
-                    <span>SERVICIOS</span>
-                    <span>EQUIPOS</span>
-                    <span>CLIENTES</span>
-                  </div>
-                  <span class="bg-[#1E3A8A] text-white text-[8px] font-bold px-2.5 py-1 rounded-sm tracking-wider">COTIZAR</span>
-                </div>
-
-                <!-- Hero submarino del sitio ROV -->
-                <div class="relative px-5 sm:px-7 py-6 sm:py-8 bg-gradient-to-br from-[#0F293A] via-[#134E4A] to-[#0A1E2E] text-white overflow-hidden min-h-[215px] sm:min-h-[250px]">
-                  <!-- Efecto de luz submarina sutil -->
-                  <div class="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_70%_20%,#38BDF8,transparent_60%)]"></div>
-                  <div class="relative z-10 max-w-[72%]">
-                    <p class="font-heading font-extrabold text-base sm:text-xl leading-[1.15] tracking-tight text-white">
-                      Inspecciones y Trabajos Submarinos con ROV
-                    </p>
-                    <div class="w-24 h-0.5 bg-white/80 my-2.5"></div>
-                    <p class="text-[10px] sm:text-xs italic font-semibold text-slate-100">
-                      Remotely Operated Vehicle
-                    </p>
-                    <p class="mt-1.5 text-[8.5px] sm:text-[10px] text-slate-200 leading-relaxed">
-                      Operaciones submarinas profesionales para acuicultura, minería y obras marítimas con registro en video e informe técnico.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 2. VENTANA WEB SECUNDARIA (Abajo Izquierda: Seguridad Los Lagos) -->
-              <div class="absolute bottom-2 left-0 w-[60%] sm:w-[56%] rounded-xl overflow-hidden shadow-2xl border border-slate-700 bg-[#0F172A] z-20">
-                <!-- Barra de navegador macOS -->
-                <div class="bg-[#E2E8F0] px-3 py-1.5 flex items-center gap-1.5 border-b border-slate-300">
-                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-                </div>
-
-                <!-- Navbar interna Seguridad Los Lagos -->
-                <div class="bg-[#0B1120] px-3 py-2 flex items-center justify-between border-b border-slate-800">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-3.5 h-3.5 rounded-full bg-[#2563EB] inline-flex items-center justify-center text-[7px] font-bold text-white">S</span>
-                    <span class="text-[8px] font-bold text-white tracking-tight">Seguridad <span class="text-[#60A5FA]">Los Lagos</span></span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="bg-[#16A34A] text-white text-[6.5px] font-semibold px-1.5 py-0.5 rounded">WhatsApp</span>
-                    <span class="bg-[#2563EB] text-white text-[6.5px] font-semibold px-1.5 py-0.5 rounded hidden sm:inline">Solicitar cotización</span>
-                  </div>
-                </div>
-
-                <!-- Hero Seguridad Los Lagos -->
-                <div class="relative p-3.5 sm:p-4 bg-gradient-to-br from-[#0B132B] via-[#1E293B] to-[#0F172A] text-white">
-                  <span class="inline-block px-2 py-0.5 rounded-full bg-[#1E3A8A]/80 border border-[#3B82F6]/40 text-[6.5px] text-slate-200 tracking-wider uppercase mb-1.5">
-                    Seguridad Privada · Región de los Lagos
+                <!-- Hero de la Web Corporativa -->
+                <div class="relative px-5 sm:px-6 py-5 sm:py-7 bg-gradient-to-br from-[#0B1120] via-[#172554] to-[#0F172A] text-white min-h-[210px] sm:min-h-[245px]">
+                  <span class="inline-block px-2 py-0.5 rounded bg-slate-800/90 border border-slate-700 text-[7.5px] font-semibold text-[#38BDF8] uppercase tracking-wider mb-2">
+                    Arriendo de Equipos · Puerto Montt a Chiloé
                   </span>
-                  <p class="font-heading font-extrabold text-xs sm:text-sm leading-tight text-white">
-                    Protegemos lo que más <span class="text-[#60A5FA]">importa para su empresa</span>
+                  <p class="font-heading font-extrabold text-sm sm:text-lg leading-snug text-white max-w-[85%]">
+                    Maquinaria pesada y logística operativa para obras civiles e industria
                   </p>
-                  <p class="mt-1.5 text-[7.5px] sm:text-[8.5px] text-slate-300 leading-relaxed">
-                    Guardias de seguridad, supervisión 24/7, control de acceso y resguardo industrial en la Región de los Lagos.
+                  <p class="mt-1.5 text-[8.5px] sm:text-[10px] text-slate-300 leading-relaxed max-w-[82%]">
+                    Catálogo con disponibilidad en tiempo real, cotizador automático para empresas y seguimiento de flota en faena.
                   </p>
-                  <div class="mt-2.5 flex items-center gap-1.5">
-                    <span class="bg-[#2563EB] text-white text-[7px] font-semibold px-2 py-1 rounded">Solicitar cotización</span>
-                    <span class="border border-slate-600 text-slate-200 text-[7px] font-medium px-2 py-1 rounded">Contactar por WhatsApp</span>
+                  <div class="mt-3.5 flex items-center gap-2">
+                    <span class="bg-white text-[#0B1120] text-[8px] sm:text-[9px] font-bold px-3 py-1.5 rounded">Ver catálogo disponible</span>
+                    <span class="bg-slate-800/90 border border-slate-600 text-slate-200 text-[8px] sm:text-[9px] font-semibold px-2.5 py-1.5 rounded">Ficha técnica PDF</span>
                   </div>
                 </div>
               </div>
 
-              <!-- 3. CELULAR CON ASISTENTE EN LÍNEA (Abajo Derecha) -->
-              <div class="absolute bottom-0 right-0 w-[44%] sm:w-[40%] max-w-[215px] rounded-[1.75rem] sm:rounded-[2rem] bg-[#090D16] p-2 sm:p-2.5 shadow-2xl border border-slate-700 z-30">
-                <!-- Notch superior del teléfono -->
-                <div class="w-14 sm:w-16 h-3 bg-[#090D16] rounded-b-xl mx-auto relative z-10 -mb-1.5"></div>
-                
-                <!-- Pantalla blanca del teléfono -->
-                <div class="bg-[#F8FAFC] rounded-[1.35rem] sm:rounded-[1.5rem] overflow-hidden text-slate-900">
-                  
-                  <!-- Cabecera del Asistente -->
-                  <div class="bg-white pt-4 pb-2.5 px-3 sm:px-3.5 border-b border-slate-200 flex items-center gap-2.5">
-                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#2563EB] shrink-0 flex items-center justify-center text-white font-heading font-bold text-[10px]">
-                      AD
+              <!-- 2. PANEL DE SOFTWARE A MEDIDA (Abajo Derecha: Sistema de Gestión / Inventario & Órdenes) -->
+              <div class="absolute bottom-1 right-0 w-[64%] sm:w-[62%] rounded-xl overflow-hidden shadow-2xl border border-slate-600/90 bg-white text-slate-900 z-20">
+                <!-- Cabecera del Panel de Gestión -->
+                <div class="bg-[#0F172A] text-white px-3.5 py-2 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
+                    <span class="font-heading font-bold text-[9.5px] sm:text-[11px] tracking-tight">Panel de Operaciones y Bodega</span>
+                  </div>
+                  <span class="text-[8px] font-semibold bg-slate-800 text-slate-200 px-2 py-0.5 rounded border border-slate-700">Sincronizado</span>
+                </div>
+
+                <!-- Cuerpo del Dashboard -->
+                <div class="p-3 sm:p-4 bg-[#F8FAFC]">
+                  <!-- Indicadores rápidos -->
+                  <div class="grid grid-cols-3 gap-2 mb-3">
+                    <div class="bg-white p-2 rounded-lg border border-slate-200">
+                      <p class="text-[7.5px] text-slate-500 font-semibold uppercase">Despachos Hoy</p>
+                      <p class="font-heading font-extrabold text-xs sm:text-sm text-slate-900 mt-0.5">24 activos</p>
                     </div>
-                    <div class="leading-tight">
-                      <p class="font-heading font-bold text-[10px] sm:text-[11px] text-slate-900">Asistente</p>
-                      <p class="font-heading font-bold text-[10px] sm:text-[11px] text-slate-900">ApexDigital</p>
-                      <p class="text-[8.5px] sm:text-[9px] font-semibold text-[#15803D] mt-0.5">En línea</p>
+                    <div class="bg-white p-2 rounded-lg border border-slate-200">
+                      <p class="text-[7.5px] text-slate-500 font-semibold uppercase">Stock Crítico</p>
+                      <p class="font-heading font-extrabold text-xs sm:text-sm text-[#15803D] mt-0.5">99.2% OK</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg border border-slate-200">
+                      <p class="text-[7.5px] text-slate-500 font-semibold uppercase">Ventas Mes</p>
+                      <p class="font-heading font-extrabold text-xs sm:text-sm text-[#1E3A8A] mt-0.5">+38% mes</p>
                     </div>
                   </div>
 
-                  <!-- Conversación de Chat -->
-                  <div class="p-2.5 sm:p-3 space-y-2 bg-[#F1F5F9]/70 min-h-[185px] sm:min-h-[215px] flex flex-col justify-center">
-                    <!-- Mensaje 1: Asistente -->
-                    <div class="bg-white border border-slate-200/80 rounded-xl rounded-tl-sm p-2 sm:p-2.5 shadow-sm max-w-[92%]">
-                      <p class="text-[8.5px] sm:text-[10px] text-slate-800 leading-snug">
-                        Hola 👋 ¿En qué podemos ayudarte?
-                      </p>
+                  <!-- Filas de órdenes recientes -->
+                  <div class="bg-white rounded-lg border border-slate-200 divide-y divide-slate-100 text-[8.5px] sm:text-[9.5px]">
+                    <div class="px-2.5 py-1.5 flex items-center justify-between">
+                      <span class="font-semibold text-slate-800">Orden #4092 · Planta Salmones</span>
+                      <span class="px-1.5 py-0.5 rounded bg-[#DCFCE7] text-[#166534] font-bold text-[7.5px]">Entregado</span>
                     </div>
-
-                    <!-- Mensaje 2: Cliente -->
-                    <div class="bg-[#DBEAFE] rounded-xl rounded-tr-sm p-2 sm:p-2.5 shadow-sm max-w-[92%] self-end">
-                      <p class="text-[8.5px] sm:text-[10px] text-[#1E3A8A] font-medium leading-snug">
-                        Necesito una página para mi empresa.
-                      </p>
-                    </div>
-
-                    <!-- Mensaje 3: Asistente -->
-                    <div class="bg-white border border-slate-200/80 rounded-xl rounded-tl-sm p-2 sm:p-2.5 shadow-sm max-w-[94%]">
-                      <p class="text-[8.5px] sm:text-[10px] text-slate-800 leading-snug">
-                        Podemos ayudarte con diseño web, sistemas, apps y automatización.
-                      </p>
+                    <div class="px-2.5 py-1.5 flex items-center justify-between">
+                      <span class="font-semibold text-slate-800">Orden #4093 · Bodega Central</span>
+                      <span class="px-1.5 py-0.5 rounded bg-[#DBEAFE] text-[#1E40AF] font-bold text-[7.5px]">En ruta</span>
                     </div>
                   </div>
+                </div>
+              </div>
 
+              <!-- 3. SMARTPHONE EN PRIMER PLANO (Izquierda Abajo: App Móvil Android & iOS) -->
+              <div class="absolute bottom-0 left-0 w-[42%] sm:w-[37%] max-w-[195px] rounded-[1.75rem] bg-[#090D16] p-2 shadow-2xl border border-slate-600 z-30">
+                <!-- Altavoz superior -->
+                <div class="w-12 h-2.5 bg-[#090D16] rounded-b-lg mx-auto relative z-10 -mb-1"></div>
+
+                <!-- Pantalla de la App Móvil -->
+                <div class="bg-white rounded-[1.35rem] overflow-hidden text-slate-900">
+                  <!-- Header de la App -->
+                  <div class="bg-[#0F172A] text-white pt-3.5 pb-2.5 px-3">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[7.5px] font-bold uppercase tracking-wider text-[#38BDF8]">App Android &amp; iOS</span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#4ADE80]"></span>
+                    </div>
+                    <p class="font-heading font-bold text-[10px] sm:text-[11px] text-white mt-0.5">Control en Terreno</p>
+                  </div>
+
+                  <!-- Contenido de la App -->
+                  <div class="p-2.5 space-y-2 bg-[#F8FAFC]">
+                    <!-- Tarjeta de Tarea / Reserva -->
+                    <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs">
+                      <div class="flex items-center justify-between">
+                        <span class="text-[7.5px] font-bold text-[#1E3A8A] bg-[#DBEAFE] px-1.5 py-0.5 rounded">Ruta #18</span>
+                        <span class="text-[7.5px] font-semibold text-slate-500">10:45 hrs</span>
+                      </div>
+                      <p class="font-bold text-[9px] sm:text-[10px] text-slate-900 mt-1">Inspección Técnica</p>
+                      <p class="text-[7.5px] text-slate-600">Puerto Montt · Sector Industrial</p>
+                    </div>
+
+                    <!-- Estado de Firma / Pago -->
+                    <div class="bg-white p-2 rounded-lg border border-slate-200 flex items-center justify-between">
+                      <div>
+                        <p class="text-[7.5px] text-slate-500 font-medium">Reporte PDF</p>
+                        <p class="text-[8.5px] font-bold text-[#15803D]">Firmado y enviado</p>
+                      </div>
+                      <span class="w-5 h-5 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center font-bold text-[10px]">✓</span>
+                    </div>
+
+                    <!-- Botón de acción en la App -->
+                    <div class="bg-[#0F172A] text-white text-center py-1.5 rounded-lg text-[8px] font-bold tracking-wide">
+                      Registrar nueva orden
+                    </div>
+                  </div>
                 </div>
               </div>
 
