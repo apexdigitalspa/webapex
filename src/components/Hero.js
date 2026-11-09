@@ -50,10 +50,10 @@ export function Hero() {
 
           <!-- Columna Derecha: Composición Original ApexDigital (Web Corporativa + Sistema de Gestión + App Móvil) -->
           <div class="lg:col-span-6 hero-stagger-4">
-            <div class="relative mx-auto max-w-[560px] lg:max-w-none h-[400px] sm:h-[460px] select-none" aria-label="Muestra de proyectos de ApexDigital: Sitio web corporativo, sistema de gestión de inventario y aplicación móvil">
+            <div class="relative mx-auto max-w-[580px] lg:max-w-none h-[460px] sm:h-[520px] select-none" aria-label="Muestra de proyectos de ApexDigital: Sitio web corporativo, sistema de gestión de inventario y aplicación móvil">
               
               <!-- 1. VENTANA PRINCIPAL (Arriba Derecha: Web Corporativa de Logística & Maquinaria del Sur) -->
-              <div class="absolute top-0 right-0 left-[12%] sm:left-[15%] rounded-xl overflow-hidden shadow-2xl border border-slate-700/90 bg-[#0B1120] z-10">
+              <div class="absolute top-0 right-0 left-[14%] sm:left-[18%] rounded-xl overflow-hidden shadow-2xl border border-slate-700/90 bg-[#0B1120] z-10">
                 <!-- Barra de navegador -->
                 <div class="bg-[#1E293B] px-3.5 py-2 flex items-center justify-between border-b border-slate-700">
                   <div class="flex items-center gap-1.5">
@@ -83,27 +83,27 @@ export function Hero() {
                 </div>
 
                 <!-- Hero de la Web Corporativa -->
-                <div class="relative px-5 sm:px-6 py-5 sm:py-7 bg-gradient-to-br from-[#0B1120] via-[#172554] to-[#0F172A] text-white min-h-[210px] sm:min-h-[245px]">
+                <div class="relative px-5 sm:px-7 py-6 sm:py-8 bg-gradient-to-br from-[#0B1120] via-[#172554] to-[#0F172A] text-white min-h-[220px] sm:min-h-[255px]">
                   <span class="inline-block px-2 py-0.5 rounded bg-slate-800/90 border border-slate-700 text-[7.5px] font-semibold text-[#38BDF8] uppercase tracking-wider mb-2">
                     Arriendo de Equipos · Puerto Montt a Chiloé
                   </span>
-                  <p class="font-heading font-extrabold text-sm sm:text-lg leading-snug text-white max-w-[85%]">
+                  <p class="font-heading font-extrabold text-sm sm:text-lg leading-snug text-white max-w-[88%]">
                     Maquinaria pesada y logística operativa para obras civiles e industria
                   </p>
-                  <p class="mt-1.5 text-[8.5px] sm:text-[10px] text-slate-300 leading-relaxed max-w-[82%]">
+                  <p class="mt-2 text-[9px] sm:text-[10.5px] text-slate-300 leading-relaxed max-w-[85%]">
                     Catálogo con disponibilidad en tiempo real, cotizador automático para empresas y seguimiento de flota en faena.
                   </p>
-                  <div class="mt-3.5 flex items-center gap-2">
-                    <span class="bg-white text-[#0B1120] text-[8px] sm:text-[9px] font-bold px-3 py-1.5 rounded">Ver catálogo disponible</span>
-                    <span class="bg-slate-800/90 border border-slate-600 text-slate-200 text-[8px] sm:text-[9px] font-semibold px-2.5 py-1.5 rounded">Ficha técnica PDF</span>
+                  <div class="mt-4 flex items-center gap-2">
+                    <span class="bg-white text-[#0B1120] text-[8.5px] sm:text-[9.5px] font-bold px-3 py-1.5 rounded">Ver catálogo disponible</span>
+                    <span class="bg-slate-800/90 border border-slate-600 text-slate-200 text-[8.5px] sm:text-[9.5px] font-semibold px-2.5 py-1.5 rounded">Ficha técnica PDF</span>
                   </div>
                 </div>
               </div>
 
               <!-- 2. PANEL DE SOFTWARE A MEDIDA (Abajo Derecha: Sistema de Gestión / Inventario & Órdenes) -->
-              <div class="absolute bottom-1 right-0 w-[64%] sm:w-[62%] rounded-xl overflow-hidden shadow-2xl border border-slate-600/90 bg-white text-slate-900 z-20">
+              <div class="absolute bottom-2 right-0 w-[62%] sm:w-[60%] rounded-xl overflow-hidden shadow-2xl border border-slate-600/90 bg-white text-slate-900 z-20">
                 <!-- Cabecera del Panel de Gestión -->
-                <div class="bg-[#0F172A] text-white px-3.5 py-2 flex items-center justify-between">
+                <div class="bg-[#0F172A] text-white px-3.5 py-2.5 flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
                     <span class="font-heading font-bold text-[9.5px] sm:text-[11px] tracking-tight">Panel de Operaciones y Bodega</span>
@@ -112,7 +112,7 @@ export function Hero() {
                 </div>
 
                 <!-- Cuerpo del Dashboard -->
-                <div class="p-3 sm:p-4 bg-[#F8FAFC]">
+                <div class="p-3.5 sm:p-4 bg-[#F8FAFC]">
                   <!-- Indicadores rápidos -->
                   <div class="grid grid-cols-3 gap-2 mb-3">
                     <div class="bg-white p-2 rounded-lg border border-slate-200">
@@ -131,11 +131,11 @@ export function Hero() {
 
                   <!-- Filas de órdenes recientes -->
                   <div class="bg-white rounded-lg border border-slate-200 divide-y divide-slate-100 text-[8.5px] sm:text-[9.5px]">
-                    <div class="px-2.5 py-1.5 flex items-center justify-between">
+                    <div class="px-2.5 py-2 flex items-center justify-between">
                       <span class="font-semibold text-slate-800">Orden #4092 · Planta Salmones</span>
                       <span class="px-1.5 py-0.5 rounded bg-[#DCFCE7] text-[#166534] font-bold text-[7.5px]">Entregado</span>
                     </div>
-                    <div class="px-2.5 py-1.5 flex items-center justify-between">
+                    <div class="px-2.5 py-2 flex items-center justify-between">
                       <span class="font-semibold text-slate-800">Orden #4093 · Bodega Central</span>
                       <span class="px-1.5 py-0.5 rounded bg-[#DBEAFE] text-[#1E40AF] font-bold text-[7.5px]">En ruta</span>
                     </div>
@@ -143,48 +143,73 @@ export function Hero() {
                 </div>
               </div>
 
-              <!-- 3. SMARTPHONE EN PRIMER PLANO (Izquierda Abajo: App Móvil Android & iOS) -->
-              <div class="absolute bottom-0 left-0 w-[42%] sm:w-[37%] max-w-[195px] rounded-[1.75rem] bg-[#090D16] p-2 shadow-2xl border border-slate-600 z-30">
-                <!-- Altavoz superior -->
-                <div class="w-12 h-2.5 bg-[#090D16] rounded-b-lg mx-auto relative z-10 -mb-1"></div>
-
-                <!-- Pantalla de la App Móvil -->
-                <div class="bg-white rounded-[1.35rem] overflow-hidden text-slate-900">
-                  <!-- Header de la App -->
-                  <div class="bg-[#0F172A] text-white pt-3.5 pb-2.5 px-3">
-                    <div class="flex items-center justify-between">
-                      <span class="text-[7.5px] font-bold uppercase tracking-wider text-[#38BDF8]">App Android &amp; iOS</span>
-                      <span class="w-1.5 h-1.5 rounded-full bg-[#4ADE80]"></span>
+              <!-- 3. SMARTPHONE EN PRIMER PLANO CON PROPORCIÓN REAL DE TELÉFONO (Izquierda, alto y estilizado) -->
+              <div class="absolute bottom-0 left-0 w-[195px] sm:w-[228px] h-[380px] sm:h-[430px] rounded-[2.25rem] bg-[#090D16] p-2.5 shadow-2xl border-2 border-slate-600/90 z-30 flex flex-col">
+                
+                <!-- Pantalla interna vertical completa -->
+                <div class="bg-[#F8FAFC] rounded-[1.75rem] overflow-hidden text-slate-900 flex-1 flex flex-col justify-between">
+                  
+                  <!-- Parte superior: Barra de estado + Header de la App -->
+                  <div>
+                    <!-- Barra de estado + Isla dinámica del teléfono -->
+                    <div class="bg-[#0F172A] text-white px-4 pt-2 pb-1 flex items-center justify-between text-[8px] font-semibold">
+                      <span>09:41</span>
+                      <span class="w-12 h-3 rounded-full bg-black"></span>
+                      <span>5G · 100%</span>
                     </div>
-                    <p class="font-heading font-bold text-[10px] sm:text-[11px] text-white mt-0.5">Control en Terreno</p>
-                  </div>
 
-                  <!-- Contenido de la App -->
-                  <div class="p-2.5 space-y-2 bg-[#F8FAFC]">
-                    <!-- Tarjeta de Tarea / Reserva -->
-                    <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs">
+                    <!-- Cabecera de la App Móvil -->
+                    <div class="bg-[#0F172A] text-white pt-2 pb-3.5 px-3.5 border-b border-slate-800">
                       <div class="flex items-center justify-between">
-                        <span class="text-[7.5px] font-bold text-[#1E3A8A] bg-[#DBEAFE] px-1.5 py-0.5 rounded">Ruta #18</span>
-                        <span class="text-[7.5px] font-semibold text-slate-500">10:45 hrs</span>
+                        <span class="text-[8px] font-bold uppercase tracking-wider text-[#38BDF8]">App Android &amp; iOS</span>
+                        <span class="inline-flex items-center gap-1 text-[8px] text-[#4ADE80] font-semibold">
+                          <span class="w-1.5 h-1.5 rounded-full bg-[#4ADE80]"></span> En línea
+                        </span>
                       </div>
-                      <p class="font-bold text-[9px] sm:text-[10px] text-slate-900 mt-1">Inspección Técnica</p>
-                      <p class="text-[7.5px] text-slate-600">Puerto Montt · Sector Industrial</p>
+                      <p class="font-heading font-bold text-xs sm:text-sm text-white mt-0.5">Control en Terreno</p>
+                      <p class="text-[8.5px] text-slate-300">Sincronizado con bodega central</p>
                     </div>
 
-                    <!-- Estado de Firma / Pago -->
-                    <div class="bg-white p-2 rounded-lg border border-slate-200 flex items-center justify-between">
-                      <div>
-                        <p class="text-[7.5px] text-slate-500 font-medium">Reporte PDF</p>
-                        <p class="text-[8.5px] font-bold text-[#15803D]">Firmado y enviado</p>
+                    <!-- Tarjetas operativas dentro de la pantalla del celular -->
+                    <div class="p-3 space-y-2.5">
+                      <!-- Tarjeta 1: Orden activa -->
+                      <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
+                        <div class="flex items-center justify-between">
+                          <span class="text-[8px] font-bold text-[#1E3A8A] bg-[#DBEAFE] px-2 py-0.5 rounded">Ruta #18</span>
+                          <span class="text-[8px] font-semibold text-slate-500">10:45 hrs</span>
+                        </div>
+                        <p class="font-bold text-[10px] sm:text-[11px] text-slate-900 mt-1.5">Inspección y Entrega</p>
+                        <p class="text-[8.5px] text-slate-600 mt-0.5">Puerto Montt · Sector Industrial</p>
                       </div>
-                      <span class="w-5 h-5 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center font-bold text-[10px]">✓</span>
-                    </div>
 
-                    <!-- Botón de acción en la App -->
-                    <div class="bg-[#0F172A] text-white text-center py-1.5 rounded-lg text-[8px] font-bold tracking-wide">
-                      Registrar nueva orden
+                      <!-- Tarjeta 2: Checklist / Inventario -->
+                      <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+                        <div>
+                          <p class="text-[8px] text-slate-500 font-semibold uppercase">Guía de Despacho</p>
+                          <p class="text-[9.5px] sm:text-[10px] font-bold text-slate-900 mt-0.5">Equipos verificados (12/12)</p>
+                        </div>
+                        <span class="w-5 h-5 rounded-full bg-[#DBEAFE] text-[#1E3A8A] flex items-center justify-center font-bold text-[10px] shrink-0">✓</span>
+                      </div>
+
+                      <!-- Tarjeta 3: Estado de Firma / PDF -->
+                      <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+                        <div>
+                          <p class="text-[8px] text-slate-500 font-semibold uppercase">Reporte Cliente PDF</p>
+                          <p class="text-[9.5px] sm:text-[10px] font-bold text-[#15803D] mt-0.5">Firmado y enviado</p>
+                        </div>
+                        <span class="w-5 h-5 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center font-bold text-[10px] shrink-0">✓</span>
+                      </div>
                     </div>
                   </div>
+
+                  <!-- Parte inferior: Botón de acción + Barra gestual del teléfono -->
+                  <div class="px-3 pb-2 pt-1 bg-white border-t border-slate-200/80">
+                    <div class="bg-[#0F172A] text-white text-center py-2 rounded-xl text-[9px] sm:text-[10px] font-bold tracking-wide shadow-xs">
+                      + Registrar nueva orden
+                    </div>
+                    <div class="w-16 h-1 rounded-full bg-slate-300 mx-auto mt-2"></div>
+                  </div>
+
                 </div>
               </div>
 
