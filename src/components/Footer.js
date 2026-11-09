@@ -99,16 +99,11 @@ export function Footer() {
           
           <!-- Identidad de Marca -->
           <div class="md:col-span-5 space-y-3">
-            <div class="flex items-center gap-3.5">
-              ${ApexLogoMark("w-11 h-11")}
-              <div>
-                <div class="font-heading font-extrabold text-xl text-white leading-none">
-                  APEXDIGITAL
-                </div>
-                <span class="text-[11px] tracking-[0.18em] text-slate-300 font-semibold uppercase block mt-1">
-                  Soluciones Digitales
-                </span>
-              </div>
+            <div class="flex items-center gap-3 whitespace-nowrap">
+              ${ApexLogoMark("w-9 h-9")}
+              <span class="font-heading font-extrabold text-lg text-white tracking-tight">
+                APEXDIGITAL
+              </span>
             </div>
             <p class="text-sm text-slate-300 max-w-sm leading-relaxed pt-1">
               Ingeniería de software, páginas web corporativas y aplicaciones móviles a medida para empresas en&nbsp;Chile.
@@ -120,10 +115,10 @@ export function Footer() {
             <h3 class="text-xs font-bold uppercase tracking-wider text-white">Secciones</h3>
             <ul class="space-y-2 text-sm text-slate-300">
               <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Catálogo de Soluciones</a></li>
-              <li><a href="#enfoque" class="hover:text-white transition-colors">Método y Compromiso</a></li>
+              <li><a href="#servicios" class="hover:text-white transition-colors">Soluciones</a></li>
+              <li><a href="#enfoque" class="hover:text-white transition-colors">Enfoque</a></li>
               <li><a href="#preguntas" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
-              <li><a href="#contacto" class="hover:text-white transition-colors">Contacto Directo</a></li>
+              <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
             </ul>
           </div>
 

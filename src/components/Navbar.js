@@ -1,9 +1,9 @@
 import { config } from '../config.js';
 
-export function ApexLogoMark(sizeClass = "w-11 h-11") {
+export function ApexLogoMark(sizeClass = "w-9 h-9") {
   return `
     <div class="relative flex items-center justify-center ${sizeClass} shrink-0">
-      <img src="/favicon-ad.png" alt="ApexDigital Monograma AD" width="48" height="48" class="w-full h-full object-contain drop-shadow-sm" />
+      <img src="/favicon-ad.png" alt="ApexDigital" width="36" height="36" class="w-full h-full object-contain" />
     </div>
   `;
 }
@@ -12,56 +12,44 @@ export function Navbar() {
   const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me comunico desde su sitio web para consultar por el desarrollo de un proyecto.')}`;
 
   return `
-    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-300/90 shadow-[0_2px_10px_rgba(11,17,32,0.04)]">
+    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-16 sm:h-20 gap-6">
           
-          <!-- Identidad Visual con Monograma Metálico AD -->
-          <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
-            ${ApexLogoMark("w-12 h-12")}
-            <div class="flex flex-col">
-              <div class="flex items-baseline tracking-tight font-heading font-extrabold text-xl sm:text-2xl leading-none">
-                <span class="text-[#0B1120]">APEX</span>
-                <span class="text-[#1E3A5F]">DIGITAL</span>
-              </div>
-              <span class="text-[11px] tracking-[0.16em] text-slate-700 font-semibold mt-1 uppercase">
-                Soluciones Digitales
-              </span>
-            </div>
+          <!-- Marca limpia en una sola línea (sin subtítulo redundante que desborde) -->
+          <a href="#" class="flex items-center gap-3 shrink-0 whitespace-nowrap focus:outline-none">
+            ${ApexLogoMark("w-9 h-9 sm:w-10 sm:h-10")}
+            <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-[#0B1120]">
+              APEX<span class="text-[#1E3A5F]">DIGITAL</span>
+            </span>
           </a>
 
-          <!-- Enlaces Desktop con separadores arquitectónicos -->
-          <nav class="hidden md:flex items-center gap-7 lg:gap-8" aria-label="Navegación Principal">
-            <a href="#servicios" class="text-sm font-semibold text-slate-800 hover:text-[#1E3A5F] transition-colors">
-              Catálogo de Soluciones
+          <!-- Navegación Desktop: concisa, de 1 palabra por ítem y sin saltos de línea -->
+          <nav class="hidden md:flex items-center gap-8 lg:gap-10 whitespace-nowrap" aria-label="Navegación Principal">
+            <a href="#servicios" class="text-sm font-semibold text-slate-700 hover:text-[#0B1120] transition-colors">
+              Soluciones
             </a>
-            <span class="text-slate-300 select-none" aria-hidden="true">/</span>
-            <a href="#enfoque" class="text-sm font-semibold text-slate-800 hover:text-[#1E3A5F] transition-colors">
-              Método y Compromiso
+            <a href="#enfoque" class="text-sm font-semibold text-slate-700 hover:text-[#0B1120] transition-colors">
+              Enfoque
             </a>
-            <span class="text-slate-300 select-none" aria-hidden="true">/</span>
-            <a href="#preguntas" class="text-sm font-semibold text-slate-800 hover:text-[#1E3A5F] transition-colors">
-              Preguntas Frecuentes
+            <a href="#preguntas" class="text-sm font-semibold text-slate-700 hover:text-[#0B1120] transition-colors">
+              Preguntas
             </a>
-            <span class="text-slate-300 select-none" aria-hidden="true">/</span>
-            <a href="#contacto" class="text-sm font-semibold text-slate-800 hover:text-[#1E3A5F] transition-colors">
-              Contacto Directo
+            <a href="#contacto" class="text-sm font-semibold text-slate-700 hover:text-[#0B1120] transition-colors">
+              Contacto
             </a>
           </nav>
 
-          <!-- Botón Ejecutivo a la derecha -->
-          <div class="hidden md:flex items-center gap-4">
-            <span class="hidden xl:inline-block text-xs font-medium text-slate-700">
-              ${config.brand.location}
-            </span>
+          <!-- Botón Ejecutivo compacto de una sola línea -->
+          <div class="hidden md:flex items-center shrink-0">
             <a 
               href="${whatsappUrl}" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="btn-tactile inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[#0B1120] hover:bg-[#1E3A5F] shadow-sm"
+              class="btn-tactile whitespace-nowrap inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[#0B1120] hover:bg-[#1E3A5F] shadow-sm"
             >
-              <span>Iniciar conversación</span>
-              <svg class="w-4 h-4 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Contáctanos</span>
+              <svg class="w-4 h-4 text-slate-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
             </a>
@@ -92,16 +80,16 @@ export function Navbar() {
       <!-- Menú Móvil Desplegable con transición suave origin-aware -->
       <div id="mobile-menu" data-open="false" class="mobile-menu-panel md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-1.5 shadow-xl">
         <a href="#servicios" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-900 hover:bg-slate-100">
-          Catálogo de Soluciones
+          Soluciones
         </a>
         <a href="#enfoque" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-900 hover:bg-slate-100">
-          Método y Compromiso
+          Enfoque
         </a>
         <a href="#preguntas" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-900 hover:bg-slate-100">
-          Preguntas Frecuentes
+          Preguntas
         </a>
         <a href="#contacto" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-900 hover:bg-slate-100">
-          Contacto Directo
+          Contacto
         </a>
         <div class="pt-3 border-t border-slate-200">
           <a 

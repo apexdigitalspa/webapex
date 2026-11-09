@@ -42,27 +42,24 @@ export function Hero() {
               </a>
             </div>
 
-            <!-- Microcopy de reducción de fricción (CRO skill) -->
+            <!-- Microcopy de reducción de fricción -->
             <p class="hero-stagger-3 mt-4 text-xs sm:text-sm text-slate-300">
               Trato directo con quien programa tu proyecto · Evaluación técnica sin costo.
             </p>
           </div>
 
-          <!-- Columna Derecha: Ficha Arquitectónica de Capacidades (5 cols) -->
+          <!-- Columna Derecha: Ficha Arquitectónica de Capacidades (5 cols, sin duplicar el logo AD) -->
           <div class="lg:col-span-5 hero-stagger-4">
             <div class="rounded-xl bg-[#0F172A] border border-slate-700/90 shadow-2xl overflow-hidden">
               
-              <!-- Cabecera de la Ficha con Sello Oficial AD -->
-              <div class="px-6 py-5 bg-[#131F36] border-b border-slate-700/90 flex items-center justify-between gap-4">
-                <div>
-                  <h2 class="font-heading font-bold text-base sm:text-lg text-white leading-snug">
-                    Áreas de Desarrollo y Alcance
-                  </h2>
-                  <p class="text-xs text-slate-300 mt-0.5">
-                    Soluciones programadas a medida · Cobertura nacional
-                  </p>
-                </div>
-                <img src="/favicon-ad.png" alt="Sello AD" width="40" height="40" class="w-10 h-10 object-contain shrink-0" />
+              <!-- Cabecera de la Ficha limpia -->
+              <div class="px-6 py-5 bg-[#131F36] border-b border-slate-700/90">
+                <h2 class="font-heading font-bold text-base sm:text-lg text-white leading-snug">
+                  Áreas de Desarrollo y Alcance
+                </h2>
+                <p class="text-xs text-slate-300 mt-0.5">
+                  Soluciones programadas a medida · Cobertura nacional
+                </p>
               </div>
 
               <!-- Filas de Especificación Técnica -->
@@ -72,7 +69,7 @@ export function Hero() {
                     <p class="font-semibold text-white">Sitios Corporativos &amp; Ventas</p>
                     <p class="text-xs text-slate-300 mt-0.5">Presencia comercial, SEO en Google y contacto directo</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0">Web &amp; SEO</span>
+                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Web &amp; SEO</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-start justify-between gap-4">
@@ -80,7 +77,7 @@ export function Hero() {
                     <p class="font-semibold text-white">Sistemas de Gestión e Intranets</p>
                     <p class="text-xs text-slate-300 mt-0.5">Bodega, inventario, clientes, órdenes y reportes PDF</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0">Software</span>
+                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Software</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-start justify-between gap-4">
@@ -88,7 +85,7 @@ export function Hero() {
                     <p class="font-semibold text-white">Apps Móviles Android &amp; iOS</p>
                     <p class="text-xs text-slate-300 mt-0.5">100% independientes o sincronizadas con tu sitio web</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0">Móvil</span>
+                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Móvil</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-start justify-between gap-4">
@@ -96,7 +93,7 @@ export function Hero() {
                     <p class="font-semibold text-white">Pagos y Reservas en Línea</p>
                     <p class="text-xs text-slate-300 mt-0.5">Integración con Webpay Plus, Flow y agendas automáticas</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0">Pagos 24/7</span>
+                  <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 shrink-0 whitespace-nowrap">Pagos 24/7</span>
                 </div>
               </div>
 
