@@ -36,14 +36,14 @@ export function Footer() {
               class="executive-card p-7 sm:p-8 flex flex-col justify-between bg-white group"
             >
               <div>
-                <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#14532D] mb-6 group-hover:bg-[#14532D] group-hover:text-white transition-colors">
-                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <div class="flex items-center gap-3 mb-3">
+                  <svg class="w-6 h-6 text-[#14532D] fill-current shrink-0" viewBox="0 0 24 24">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
                   </svg>
+                  <h3 class="font-heading font-bold text-xl text-[#0F172A]">WhatsApp Directo</h3>
                 </div>
-                <h3 class="font-heading font-bold text-xl text-[#0F172A]">WhatsApp Directo</h3>
-                <p class="text-slate-700 text-sm mt-2 leading-relaxed">
-                  Ideal para consultas rápidas, contarnos tu idea o coordinar una llamada.
+                <p class="text-slate-700 text-sm leading-relaxed">
+                  Ideal para consultas rápidas, contarnos tu idea o coordinar una&nbsp;llamada.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col gap-1.5">
@@ -60,14 +60,14 @@ export function Footer() {
               class="executive-card p-7 sm:p-8 flex flex-col justify-between bg-white group"
             >
               <div>
-                <div class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#1E3A5F] mb-6 group-hover:bg-[#0F172A] group-hover:text-white transition-colors">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <div class="flex items-center gap-3 mb-3">
+                  <svg class="w-6 h-6 text-[#1E3A5F] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
+                  <h3 class="font-heading font-bold text-xl text-[#0F172A]">Correo Corporativo</h3>
                 </div>
-                <h3 class="font-heading font-bold text-xl text-[#0F172A]">Correo Corporativo</h3>
-                <p class="text-slate-700 text-sm mt-2 leading-relaxed">
-                  Envíanos documentos, detalles técnicos o solicitudes de presupuesto formal.
+                <p class="text-slate-700 text-sm leading-relaxed">
+                  Envíanos documentos, detalles técnicos o solicitudes de presupuesto&nbsp;formal.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col gap-1.5">
