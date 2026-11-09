@@ -28,7 +28,7 @@ export function Authority() {
         <h3 class="font-heading font-bold text-lg sm:text-xl text-[#0F172A] mb-2">
           ${p.title}
         </h3>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
           ${p.desc}
         </p>
       </div>
@@ -41,26 +41,22 @@ export function Authority() {
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          <!-- Columna Izquierda: Historia, Identidad y Sello Humano -->
-          <div class="lg:col-span-5 space-y-6">
-            <p class="text-xs font-bold uppercase tracking-widest text-[#1E3A5F]">
-              Nuestra forma de trabajar
-            </p>
-
+          <!-- Columna Izquierda: Sin kicker artificial arriba del h2 -->
+          <div class="lg:col-span-5 space-y-5">
             <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight leading-tight">
               Tecnología bien hecha, con compromiso real.
             </h2>
 
-            <p class="text-slate-600 text-base leading-relaxed">
-              Sabemos que encargar una página web o un software suele generar desconfianza: proyectos que quedan a medias, plazos que no se cumplen o soporte que desaparece.
+            <p class="text-slate-700 text-base leading-relaxed">
+              Sabemos que encargar una página web o un software suele generar dudas: proyectos que quedan a medias, plazos que no se cumplen o soporte que desaparece.
             </p>
 
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas y emprendimientos de todo Chile bajo una regla simple: <strong class="text-[#0F172A] font-semibold">comprometer solo lo que podemos cumplir con excelencia</strong> y acompañar a nuestros clientes como su socio tecnológico de confianza.
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Desde <strong class="text-[#0F172A] font-semibold">${config.brand.location}</strong> trabajamos con empresas de todo Chile bajo una regla simple: <strong class="text-[#0F172A] font-semibold">comprometer solo lo que podemos cumplir con excelencia</strong> y acompañar a cada cliente como su socio tecnológico de&nbsp;confianza.
             </p>
           </div>
 
-          <!-- Columna Derecha: Diseño Editorial en Filas (Rompe con las cajitas repetitivas de IA) -->
+          <!-- Columna Derecha: Diseño Editorial en Filas -->
           <div class="lg:col-span-7 lg:pl-6 lg:border-l lg:border-slate-200">
             ${rowsHtml}
           </div>

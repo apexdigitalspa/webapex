@@ -12,12 +12,11 @@ export function Navbar() {
   const whatsappUrl = `https://wa.me/${config.contact.whatsapp}?text=${encodeURIComponent('Hola ApexDigital, me comunico desde su sitio web para consultar por el desarrollo de un proyecto.')}`;
 
   return `
-    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_1px_3px_rgba(15,23,42,0.03)]">
-      <!-- Barra Principal -->
+    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.03)]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           
-          <!-- Identidad Visual con Monograma Metálico AD -->
+          <!-- Identidad Visual con Monograma Metálico AD (piso mínimo 11px cumplido) -->
           <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
             ${ApexLogoMark("w-12 h-12")}
             <div class="flex flex-col">
@@ -25,7 +24,7 @@ export function Navbar() {
                 <span class="text-[#0F172A]">APEX</span>
                 <span class="text-[#1E3A5F]">DIGITAL</span>
               </div>
-              <span class="text-[10px] tracking-[0.22em] text-slate-500 font-semibold mt-1 uppercase">
+              <span class="text-[11px] tracking-[0.18em] text-slate-600 font-semibold mt-1 uppercase">
                 Soluciones Digitales
               </span>
             </div>
@@ -33,13 +32,13 @@ export function Navbar() {
 
           <!-- Enlaces Desktop -->
           <nav class="hidden md:flex items-center gap-9" aria-label="Navegación Principal">
-            <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
+            <a href="#servicios" class="text-sm font-semibold text-slate-700 hover:text-[#0F172A] transition-colors">
               Catálogo de Soluciones
             </a>
-            <a href="#enfoque" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
+            <a href="#enfoque" class="text-sm font-semibold text-slate-700 hover:text-[#0F172A] transition-colors">
               Enfoque Técnico
             </a>
-            <a href="#contacto" class="text-sm font-semibold text-slate-600 hover:text-[#0F172A] transition-colors">
+            <a href="#contacto" class="text-sm font-semibold text-slate-700 hover:text-[#0F172A] transition-colors">
               Contacto
             </a>
           </nav>
@@ -61,7 +60,7 @@ export function Navbar() {
             <button 
               id="mobile-menu-btn" 
               type="button" 
-              class="inline-flex items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 focus:outline-none"
+              class="inline-flex items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-300 focus:outline-none"
               aria-label="Abrir menú"
             >
               <svg id="menu-icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,23 +77,23 @@ export function Navbar() {
 
       <!-- Menú Móvil Desplegable -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl">
-        <a href="#servicios" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
+        <a href="#servicios" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50">
           Catálogo de Soluciones
         </a>
-        <a href="#enfoque" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
+        <a href="#enfoque" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50">
           Enfoque Técnico
         </a>
-        <a href="#contacto" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50">
+        <a href="#contacto" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50">
           Contacto
         </a>
-        <div class="pt-3 border-t border-slate-100">
+        <div class="pt-3 border-t border-slate-200">
           <a 
             href="${whatsappUrl}" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="btn-apex-primary w-full inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold"
+            class="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold text-white bg-[#0F172A] hover:bg-[#1E3A5F]"
           >
-            Cotizar por WhatsApp (${config.contact.whatsappDisplay})
+            Contáctanos por WhatsApp (${config.contact.whatsappDisplay})
           </a>
         </div>
       </div>
