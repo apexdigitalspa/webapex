@@ -1,0 +1,27 @@
+# ApexDigital — Soluciones Digitales e Ingeniería de Software
+
+> Firma chilena de ingeniería de software, diseño de páginas web corporativas, sistemas web a medida con base de datos y aplicaciones móviles (Android e iOS) con base en Puerto Montt y cobertura en todo Chile.
+
+## Servicios Principales
+
+1. **Sitios Web Corporativos y Páginas de Ventas (SEO & Velocidad):**
+   - Diseño y programación de páginas web empresariales sobrias, rápidas en celulares y estructuradas para posicionar en Google Chile y convertir visitas en oportunidades comerciales.
+   - Rubros frecuentes: empresas de servicios, constructoras, clínicas, consultoras, estudios profesionales y comercio establecido.
+
+2. **Sistemas Web a Medida, Intranets y Bases de Datos:**
+   - Software privado con acceso por usuario y clave desde computador o celular para reemplazar planillas de Excel dispersas.
+   - Entregables habituales: control de stock y bodega, órdenes de trabajo, fichas de clientes y proveedores, generación de cotizaciones/reportes en PDF y paneles administrativos.
+
+3. **Aplicaciones Móviles para Celular (Android & iOS):**
+   - Desarrollo de apps móviles desde cero para publicar en Google Play y App Store o para uso interno de personal en terreno.
+   - Modalidades: desarrollo de aplicaciones móviles 100% independientes o sincronizadas en tiempo real con el sitio/sistema web de la empresa.
+
+4. **Pagos en Línea y Automatización de Procesos:**
+   - Integración de pasarelas de pago chilenas (Webpay Plus, Flow), agendamiento de horas en línea, notificaciones automáticas por correo y formularios inteligentes de cotización.
+
+## Contacto Oficial
+
+- **Sitio Web:** https://www.apexdigital.cl/
+- **WhatsApp Directo:** +56 9 4662 5167 (https://wa.me/56946625167)
+- **Correo Corporativo:** contacto@apexdigital.cl
+- **Ubicación:** Puerto Montt, Región de Los Lagos, Chile (Atención directa a empresas de todo Chile).

@@ -3,50 +3,50 @@ export function Services() {
     {
       title: "Sitios Web Corporativos y Páginas de Ventas",
       subtitle: "Presencia comercial sólida y captación de clientes en Google",
-      description: "Tu sitio web es la primera impresión comercial de tu empresa. Desarrollamos páginas corporativas sobrias, rápidas y bien estructuradas que proyectan respaldo profesional, presentan tus servicios con claridad y convierten visitas en oportunidades reales de negocio.",
+      description: "Si un potencial cliente busca tu empresa en internet, lo que ve en los primeros segundos define si te pide una cotización o pasa de largo. Diseñamos sitios corporativos sobrios, rápidos y bien estructurados que proyectan respaldo profesional, explican con claridad tu servicio y facilitan el contacto directo.",
       deliverables: [
         "Diseño corporativo a medida",
-        "Optimización para Google (SEO)",
-        "Carga rápida en celulares",
-        "Contacto directo a WhatsApp y correo"
+        "Estructura optimizada para Google (SEO)",
+        "Carga rápida en celulares y computadores",
+        "Botones directos a WhatsApp y correo"
       ],
-      examples: "Ideal para empresas de servicios, constructoras, clínicas, consultoras, estudios profesionales y comercio establecido."
+      examples: "Empresas de servicios, constructoras, clínicas, consultoras, estudios profesionales y comercio establecido."
     },
     {
       title: "Sistemas Web a Medida y Bases de Datos",
       subtitle: "Plataformas privadas para ordenar la operación diaria de tu negocio",
-      description: "Cuando las planillas de Excel o los cuadernos quedan cortos, programamos un sistema privado para tu empresa. Entras con tu usuario y clave desde cualquier computador o celular para controlar cada área de tu operación con información centralizada.",
+      description: "Cuando las planillas de Excel o los mensajes sueltos quedan cortos, programamos un sistema privado para tu empresa. Entras con tu usuario y clave desde cualquier computador o celular para controlar cada área de tu operación con información centralizada y respaldada.",
       deliverables: [
-        "Control de stock y bodega",
-        "Órdenes de trabajo y seguimiento",
-        "Fichas de clientes y proveedores",
-        "Cotizaciones y reportes en PDF"
+        "Control de stock, insumos y bodega",
+        "Órdenes de trabajo y estados de avance",
+        "Fichas de clientes, historial y proveedores",
+        "Generación de cotizaciones y reportes en PDF"
       ],
-      examples: "Ideal para empresas que necesitan ordenar su inventario, terreno, ventas o administración interna sin depender de hojas de cálculo."
+      examples: "Empresas que necesitan ordenar su inventario, equipo en terreno, ventas o administración interna en un solo lugar."
     },
     {
       title: "Aplicaciones Móviles para Celular (Android & iOS)",
       subtitle: "Proyectos móviles independientes o sincronizados con tu plataforma web",
-      description: "Creamos aplicaciones móviles desde cero para publicar en tiendas o para uso interno de tu personal. Podemos desarrollar tu App como un proyecto 100% independiente, o bien conectarla con tu página web para que trabajen sincronizadas en tiempo real.",
+      description: "Creamos aplicaciones móviles desde cero para publicar en tiendas o para uso interno de tu personal. Podemos desarrollar tu App como un proyecto 100% independiente, o bien conectarla con tu página o sistema web para que trabajen sincronizadas en tiempo real.",
       deliverables: [
-        "Apps nativas / híbridas Android e iOS",
-        "Modalidad 100% independiente disponible",
+        "Aplicaciones para Android e iPhone (iOS)",
+        "Desarrollo 100% independiente disponible",
         "Sincronización web en tiempo real opcional",
-        "Perfiles para clientes o personal en terreno"
+        "Perfiles para clientes o personal en ruta"
       ],
-      examples: "Ideal para apps de pedidos, reservas de clientes, control de técnicos o repartidores en ruta y catálogos móviles interactivos."
+      examples: "Apps de pedidos o reservas para clientes, control de técnicos o repartidores en terreno y catálogos móviles."
     },
     {
       title: "Pagos en Línea y Automatización de Procesos",
       subtitle: "Cobros digitales y reducción de tareas manuales en tu oficina",
       description: "Conectamos tu plataforma digital con medios de pago chilenos y herramientas que reducen el trabajo repetitivo de tu equipo, permitiendo que tu negocio reciba solicitudes, reservas o ventas pagadas las 24 horas del día.",
       deliverables: [
-        "Pasarelas Webpay Plus y Flow",
-        "Agendamiento de horas en línea",
-        "Notificaciones automáticas por correo",
-        "Formularios de cotización inteligentes"
+        "Cobros con Webpay Plus y Flow",
+        "Agendamiento de horas y cupos en línea",
+        "Comprobantes y alertas automáticas por correo",
+        "Formularios de cotización estructurados"
       ],
-      examples: "Ideal para negocios que buscan vender en línea, cobrar reservas por adelantado o automatizar la recepción de solicitudes."
+      examples: "Negocios que buscan vender en línea, confirmar reservas con pago previo o automatizar la recepción de solicitudes."
     }
   ];
 
@@ -70,7 +70,7 @@ export function Services() {
             ${item.description}
           </p>
           <p class="text-xs sm:text-sm text-slate-700 bg-[#F4F6F9] px-4 py-3 rounded-lg border border-slate-300/80 leading-relaxed">
-            <strong class="text-[#0B1120] font-semibold">Aplicación práctica:</strong> ${item.examples}
+            <strong class="text-[#0B1120] font-semibold">Rubros y casos frecuentes:</strong> ${item.examples}
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export function Services() {
               Catálogo de Soluciones Digitales
             </h2>
             <p class="mt-3 text-slate-800 text-base sm:text-lg leading-relaxed">
-              Construimos herramientas digitales completas según la etapa y necesidad real de tu empresa, sin paquetes rígidos ni funciones de relleno.
+              Construimos herramientas digitales completas según la etapa y necesidad real de tu empresa, desde presencia corporativa hasta sistemas operativos a medida.
             </p>
           </div>
           <div class="shrink-0">
@@ -114,7 +114,7 @@ export function Services() {
           </div>
         </div>
 
-        <!-- Matriz Arquitectónica Suiza (Reemplaza la cuadrícula 2x2 de tarjetas genéricas) -->
+        <!-- Matriz Arquitectónica Suiza -->
         <div class="swiss-grid-frame rounded-xl overflow-hidden">
           ${rowsHtml}
         </div>

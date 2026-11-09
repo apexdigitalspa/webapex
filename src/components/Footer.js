@@ -19,7 +19,7 @@ export function Footer() {
                 ¿Conversamos sobre el proyecto de tu empresa?
               </h2>
               <p class="text-slate-800 text-base leading-relaxed">
-                Escríbenos directamente por WhatsApp o correo electrónico. Revisaremos tu idea o requerimiento y te daremos una respuesta clara, honesta y sin&nbsp;compromiso.
+                Cuéntanos por WhatsApp o correo qué necesitas construir o mejorar. Revisaremos tu caso directamente y te daremos una propuesta clara, honesta y sin&nbsp;compromiso.
               </p>
               <div class="pt-3 border-t border-slate-200 text-sm text-slate-700 space-y-1">
                 <p>Base operativa en <strong class="text-[#0B1120] font-semibold">${config.brand.location}</strong></p>
@@ -122,6 +122,7 @@ export function Footer() {
               <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
               <li><a href="#servicios" class="hover:text-white transition-colors">Catálogo de Soluciones</a></li>
               <li><a href="#enfoque" class="hover:text-white transition-colors">Método y Compromiso</a></li>
+              <li><a href="#preguntas" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
               <li><a href="#contacto" class="hover:text-white transition-colors">Contacto Directo</a></li>
             </ul>
           </div>
@@ -151,7 +152,7 @@ export function Footer() {
       target="_blank" 
       rel="noopener noreferrer"
       aria-label="Hablar por WhatsApp"
-      class="whatsapp-float-btn fixed bottom-6 right-6 z-50 flex items-center gap-3 pl-3.5 pr-5 py-3 rounded-full border border-white/25"
+      class="whatsapp-float-btn fixed z-50 flex items-center gap-3 pl-3.5 pr-5 py-3 rounded-full border border-white/25"
     >
       <div class="relative flex items-center justify-center w-10 h-10 rounded-full bg-white text-[#14532D] shadow-sm shrink-0">
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">

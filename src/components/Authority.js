@@ -4,18 +4,37 @@ export function Authority() {
   const pillars = [
     {
       title: "Hablamos en claro, sin rodeos técnicos",
-      problem: "El problema habitual: agencias que hablan en jerga informática confusa y entregan algo distinto a lo que pediste.",
-      solution: "No necesitas saber de programación para trabajar con nosotros. Escuchamos cómo opera tu negocio, te proponemos una solución práctica y te explicamos cada avance en un lenguaje directo."
+      problem: "El problema habitual: agencias que hablan en jerga informática confusa y terminan entregando algo distinto a lo que tu negocio necesitaba.",
+      solution: "No necesitas saber de programación para trabajar con nosotros. Escuchamos cómo opera tu empresa, te proponemos una solución práctica y te explicamos cada avance en un lenguaje directo."
     },
     {
       title: "Trato directo con quien programa tu proyecto",
-      problem: "El problema habitual: hablas con un vendedor comercial que promete todo y desaparece una vez firmado el presupuesto.",
-      solution: "En ApexDigital tratas directamente con el ingeniero a cargo de diseñar y programar tu plataforma, desde la primera reunión hasta la puesta en marcha."
+      problem: "El problema habitual: hablas con un vendedor comercial que promete todo y desaparece apenas se firma el presupuesto.",
+      solution: "En ApexDigital tratas directamente con el ingeniero a cargo de diseñar y programar tu plataforma, desde la primera conversación hasta la puesta en marcha."
     },
     {
       title: "Plataformas rápidas, estables y bien construidas",
-      problem: "El problema habitual: sitios lentos hechos con plantillas sobrecargadas que fallan al primer cambio.",
-      solution: "Cuidamos la arquitectura técnica detrás de cada entrega: velocidad de carga en celulares, estructura optimizada para Google (SEO), seguridad y estabilidad operativa."
+      problem: "El problema habitual: sitios lentos armados con plantillas genéricas sobrecargadas que fallan al primer cambio.",
+      solution: "Cuidamos la ingeniería detrás de cada entrega: velocidad de carga en celulares, estructura técnica para Google (SEO), seguridad de datos y estabilidad operativa."
+    }
+  ];
+
+  const faqs = [
+    {
+      q: "¿Puedo encargar solo una página web o solo una App móvil independiente?",
+      a: "Sí. Cada proyecto se adapta a lo que tu empresa necesite hoy: puedes encargar únicamente un sitio web corporativo, un sistema interno con base de datos o una aplicación móvil 100% independiente. Y si en el futuro deseas que tu App y tu sistema web trabajen conectados en tiempo real, también podemos integrarlos."
+    },
+    {
+      q: "¿Cuánto tiempo toma desarrollar un proyecto?",
+      a: "Depende del alcance técnico. Una página web corporativa o landing page de alto rendimiento suele estar lista entre 1 y 3 semanas, mientras que un sistema web con base de datos a medida o una aplicación móvil toma entre 4 y 8 semanas, con entregas parciales para que veas el avance en todo momento."
+    },
+    {
+      q: "¿Trabajan solo en Puerto Montt o atienden a empresas de todo Chile?",
+      a: "Nuestra base operativa está en Puerto Montt, pero trabajamos de forma directa y remota con empresas de cualquier región de Chile a través de videollamadas, WhatsApp y entregas en línea."
+    },
+    {
+      q: "¿Qué ocurre después de que entregan la página o el sistema?",
+      a: "Al finalizar la puesta en marcha, te enseñamos paso a paso cómo usar tu plataforma con total facilidad. Además, ofrecemos soporte técnico y planes de mantención continua para actualizaciones, respaldos y mejoras a medida que tu negocio crece."
     }
   ];
 
@@ -29,6 +48,17 @@ export function Authority() {
       </p>
       <p class="text-slate-800 text-sm sm:text-base leading-relaxed">
         ${p.solution}
+      </p>
+    </div>
+  `).join('');
+
+  const faqsHtml = faqs.map(item => `
+    <div class="p-6 sm:p-7 bg-[#F4F6F9] border border-slate-300/90 rounded-xl">
+      <h3 class="font-heading font-bold text-base sm:text-lg text-[#0B1120] leading-snug">
+        ${item.q}
+      </h3>
+      <p class="mt-2.5 text-sm sm:text-base text-slate-800 leading-relaxed">
+        ${item.a}
       </p>
     </div>
   `).join('');
@@ -80,6 +110,22 @@ export function Authority() {
             ${pillarsHtml}
           </div>
 
+        </div>
+
+        <!-- Bloque de Preguntas Frecuentes (CRO Objection Handling + AI-SEO Extractable Answers) -->
+        <div id="preguntas" class="mt-20 pt-16 border-t border-slate-200">
+          <div class="max-w-2xl mb-10">
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-[#0B1120] tracking-tight">
+              Preguntas frecuentes antes de iniciar un proyecto
+            </h2>
+            <p class="mt-2.5 text-slate-800 text-base leading-relaxed">
+              Respuestas claras a las consultas más habituales de nuestros clientes sobre plazos, modalidades y soporte.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            ${faqsHtml}
+          </div>
         </div>
 
       </div>
